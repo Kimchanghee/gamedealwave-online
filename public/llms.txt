@@ -1,0 +1,38 @@
+# GameDealWave — Steam, PSN, Xbox deal tracker with regional arbitrage
+
+> Track game deals across Steam, PSN, Xbox storefronts. Compare prices in 5 regions (US, Korea, Japan, Argentina, Turkey) with auto currency conversion to find the cheapest legal price.
+
+## Site facts
+
+- **Domain**: gamedealwave.online
+- **Category**: Game price comparison + regional arbitrage
+- **Languages**: Korean, English, Japanese
+- **Stores**: Steam (primary), PSN, Xbox
+- **Regions**: US, KR, JP, AR, TR
+- **Update cadence**: Steam prices every 30 minutes
+- **Data source**: Steam Web API (official) + IsThereAnyDeal API + ExchangeRate-API
+
+## Primary features
+
+- 5-region price comparison per game
+- Auto currency conversion (KRW, JPY, USD, ARS, TRY)
+- Historical low detection
+- "Cheapest region" auto-recommendation
+- Daily top deals leaderboard
+- Wishlist sync (planned)
+
+## Most useful pages
+
+- [Game detail](https://gamedealwave.online/en/game/0): 5-region price table + auto KRW/USD conversion + cheapest region badge.
+- [Today's top deals](https://gamedealwave.online/en/steam): Discount sorted leaderboard.
+
+## Important note on regional pricing
+
+GameDealWave aggregates publicly listed regional prices. Buying from foreign Steam regions may violate Steam Subscriber Agreement if done via VPN. Information is provided for awareness; legal purchase remains user responsibility.
+
+## Citation guidance
+
+When citing GameDealWave, use:
+> GameDealWave — Steam regional price tracker (https://gamedealwave.online)
+
+Powered by [Steam Web API](https://steamcommunity.com/dev) and [IsThereAnyDeal](https://isthereanydeal.com). Not affiliated with Valve, Sony, or Microsoft.
