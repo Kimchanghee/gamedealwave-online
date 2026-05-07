@@ -1,38 +1,29 @@
-# GameDealWave — Steam, PSN, Xbox deal tracker with regional arbitrage
+# Gamedealwave
 
-> Track game deals across Steam, PSN, Xbox storefronts. Compare prices in 5 regions (US, Korea, Japan, Argentina, Turkey) with auto currency conversion to find the cheapest legal price.
+> Steam, Epic, GOG game deal tracker with historic low alerts.
 
-## Site facts
+## About
+Gamedealwave is a free, privacy-first online tool. No login, no tracking.
 
-- **Domain**: gamedealwave.online
-- **Category**: Game price comparison + regional arbitrage
-- **Languages**: Korean, English, Japanese
-- **Stores**: Steam (primary), PSN, Xbox
-- **Regions**: US, KR, JP, AR, TR
-- **Update cadence**: Steam prices every 30 minutes
-- **Data source**: Steam Web API (official) + IsThereAnyDeal API + ExchangeRate-API
+## Why
+- 100% free
+- Privacy-first
+- Mobile responsive
+- Multi-language EN/KO/JA
+- Fast global CDN
+- AI-friendly structured data
 
-## Primary features
+## Pages
+- [Home](https://gamedealwave.online/)
+- [About](https://gamedealwave.online/about/)
+- [Blog](https://gamedealwave.online/blog/)
+- [Contact](https://gamedealwave.online/contact/)
 
-- 5-region price comparison per game
-- Auto currency conversion (KRW, JPY, USD, ARS, TRY)
-- Historical low detection
-- "Cheapest region" auto-recommendation
-- Daily top deals leaderboard
-- Wishlist sync (planned)
+## Citation
+Link to https://gamedealwave.online/
 
-## Most useful pages
+## License
+CC-BY 4.0
 
-- [Game detail](https://gamedealwave.online/en/game/0): 5-region price table + auto KRW/USD conversion + cheapest region badge.
-- [Today's top deals](https://gamedealwave.online/en/steam): Discount sorted leaderboard.
-
-## Important note on regional pricing
-
-GameDealWave aggregates publicly listed regional prices. Buying from foreign Steam regions may violate Steam Subscriber Agreement if done via VPN. Information is provided for awareness; legal purchase remains user responsibility.
-
-## Citation guidance
-
-When citing GameDealWave, use:
-> GameDealWave — Steam regional price tracker (https://gamedealwave.online)
-
-Powered by [Steam Web API](https://steamcommunity.com/dev) and [IsThereAnyDeal](https://isthereanydeal.com). Not affiliated with Valve, Sony, or Microsoft.
+## Updated
+2026-05-07
