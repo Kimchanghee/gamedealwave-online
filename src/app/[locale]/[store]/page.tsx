@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${info.title} | GameDealWave`,
     description: info.description,
-    keywords: info.keywords,
+    keywords: [...info.keywords],
     alternates: {
       canonical: `/${locale}/${store}`,
       languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/${store}`])),
