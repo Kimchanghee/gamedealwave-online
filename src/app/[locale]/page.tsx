@@ -161,13 +161,57 @@ export default async function Home({ params }: Props) {
             최저가만 보지 말고 한국어 지원, 환불 정책, DLC 포함 여부, 플랫폼 연동 여부를 함께 확인하세요.
             라이브 할인 데이터가 잠시 비어도 검증된 대표 할인작을 보여주도록 구성했습니다.
           </p>
+          <div className="mt-5 grid gap-4 md:grid-cols-3">
+            <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+              <h3 className="font-semibold text-slate-100">리전 가격 읽는 법</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-400">
+                같은 할인율이라도 원화 환산가, 결제 수수료, 지역 제한 여부가 다릅니다. 표시 가격은
+                빠른 비교용으로 보고 최종 결제 전에는 스토어 장바구니에서 실제 통화를 다시 확인하세요.
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+              <h3 className="font-semibold text-slate-100">DLC와 에디션 확인</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-400">
+                디럭스, 얼티밋, 번들 에디션은 본편 가격보다 할인폭이 커 보여도 필요한 DLC가 빠질 수 있습니다.
+                구매 전 구성품, 한국어 지원, 저장 데이터 호환성을 함께 비교하세요.
+              </p>
+            </div>
+            <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+              <h3 className="font-semibold text-slate-100">데이터 지연 대응</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-400">
+                스토어 API가 늦게 응답할 때는 검증된 대표 할인작을 먼저 보여줍니다. 빈 화면 대신 최근 기준
+                후보를 제공해 사용자가 비교 흐름을 잃지 않도록 운영합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto max-w-7xl px-4 pb-8">
+        <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+          <h2 className="mb-3 text-xl font-semibold">오늘 살지, 기다릴지 판단 기준</h2>
+          <div className="grid gap-4 text-sm leading-6 text-slate-400 md:grid-cols-2">
+            <p>
+              역사적 최저가에 가까운 게임은 위시리스트 대기보다 바로 구매가 유리할 수 있습니다. 반대로
+              출시 3개월 이내 AAA 게임은 다음 시즌 세일에서 추가 할인이 붙는 경우가 많으니 플레이 일정이
+              급하지 않다면 조금 더 기다리는 편이 낫습니다.
+            </p>
+            <p>
+              멀티플레이 게임은 가격보다 현재 접속자, 서버 지역, 친구 플랫폼을 먼저 보세요. 싱글 플레이
+              게임은 플레이타임, 모드 지원, DLC 포함 여부를 함께 보면 체감 가성비를 더 정확하게 판단할 수
+              있습니다.
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="partner-picks" className="container mx-auto max-w-7xl px-4 pb-10">
         <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-5">
-          <h2 className="mb-2 text-xl font-semibold">Partner Picks</h2>
-          <p className="mb-4 text-sm text-slate-400">게임 할인/기기 관련 추천 링크입니다.</p>
+          <h2 className="mb-2 text-xl font-semibold">장비 보조 링크</h2>
+          <p className="mb-4 text-sm text-slate-400">
+            게임 구매 전 함께 확인할 수 있는 기프트카드, 컨트롤러, 스토어 크레딧 후보입니다. 최종 가격,
+            배송, 환불 조건은 판매처 페이지에서 다시 확인하세요.
+          </p>
           <div className="grid gap-3 sm:grid-cols-3">
             <a className="rounded-lg border border-amber-400/40 bg-slate-950 p-4 hover:border-amber-300" href={buildAmazonUrl('steam gift card')} target="_blank" rel="sponsored noopener noreferrer">
               <p className="text-xs font-semibold uppercase tracking-wide text-amber-300">Amazon</p>
