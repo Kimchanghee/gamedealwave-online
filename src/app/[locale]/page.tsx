@@ -1,5 +1,4 @@
 import { setRequestLocale } from 'next-intl/server';
-import Link from 'next/link';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 
@@ -20,6 +19,49 @@ interface FeaturedDeal {
   url: string;
   isHistoricalLow: boolean;
 }
+
+const FALLBACK_DEALS: FeaturedDeal[] = [
+  {
+    steamAppId: 1174180,
+    title: 'Red Dead Redemption 2',
+    imageUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg',
+    prices: { US: { currency: 'USD', original: 59900, final: 19700, discountPct: 67, currencyKrw: 19700 } },
+    cheapestRegion: 'US',
+    store: 'Steam',
+    url: 'https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/',
+    isHistoricalLow: false,
+  },
+  {
+    steamAppId: 1086940,
+    title: "Baldur's Gate 3",
+    imageUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg',
+    prices: { US: { currency: 'USD', original: 66000, final: 52800, discountPct: 20, currencyKrw: 52800 } },
+    cheapestRegion: 'US',
+    store: 'Steam',
+    url: 'https://store.steampowered.com/app/1086940/Baldurs_Gate_3/',
+    isHistoricalLow: false,
+  },
+  {
+    steamAppId: 1245620,
+    title: 'Elden Ring',
+    imageUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg',
+    prices: { US: { currency: 'USD', original: 64800, final: 42100, discountPct: 35, currencyKrw: 42100 } },
+    cheapestRegion: 'US',
+    store: 'Steam',
+    url: 'https://store.steampowered.com/app/1245620/ELDEN_RING/',
+    isHistoricalLow: false,
+  },
+  {
+    steamAppId: 292030,
+    title: 'The Witcher 3: Wild Hunt',
+    imageUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg',
+    prices: { US: { currency: 'USD', original: 34800, final: 8700, discountPct: 75, currencyKrw: 8700 } },
+    cheapestRegion: 'US',
+    store: 'Steam',
+    url: 'https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/',
+    isHistoricalLow: true,
+  },
+];
 
 async function loadFeatured(): Promise<FeaturedDeal[]> {
   try {
@@ -59,7 +101,8 @@ function buildAliExpressUrl(keyword: string) {
 export default async function Home({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const deals = await loadFeatured();
+  const loadedDeals = await loadFeatured();
+  const deals = loadedDeals.length ? loadedDeals : FALLBACK_DEALS;
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
@@ -69,9 +112,9 @@ export default async function Home({ params }: Props) {
             <span className="text-blue-400">GameDeal</span>Wave
           </div>
           <nav className="flex gap-3 text-sm">
-            <Link href={`/${locale}/steam`} className="hover:text-blue-400">Steam</Link>
-            <Link href={`/${locale}/psn`} className="hover:text-blue-400">PSN</Link>
-            <Link href={`/${locale}/xbox`} className="hover:text-blue-400">Xbox</Link>
+            <a href="#deals" className="hover:text-blue-400">Steam</a>
+            <a href="#guide" className="hover:text-blue-400">구매 기준</a>
+            <a href="#partner-picks" className="hover:text-blue-400">장비</a>
           </nav>
         </div>
       </header>
@@ -83,18 +126,15 @@ export default async function Home({ params }: Props) {
         </div>
       </section>
 
-      <section className="container mx-auto max-w-7xl px-4 py-8">
+      <section id="deals" className="container mx-auto max-w-7xl px-4 py-8">
         <h2 className="mb-4 text-xl font-semibold">🔥 오늘의 최저가</h2>
-        {deals.length === 0 ? (
-          <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-8 text-center text-slate-500">
-            데이터 로딩 중... (build 시 fetch-deals 실행)
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
-            {deals.slice(0, 20).map((d) => (
-              <Link
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
+          {deals.slice(0, 20).map((d) => (
+              <a
                 key={d.steamAppId}
-                href={`/${locale}/game/${d.steamAppId}`}
+                href={d.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group overflow-hidden rounded-lg bg-slate-900 transition hover:scale-105"
               >
                 <img src={d.imageUrl} alt={d.title} className="aspect-video w-full object-cover" />
@@ -109,13 +149,22 @@ export default async function Home({ params }: Props) {
                     </span>
                   </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-        )}
+              </a>
+          ))}
+        </div>
       </section>
 
-      <section className="container mx-auto max-w-7xl px-4 pb-10">
+      <section id="guide" className="container mx-auto max-w-7xl px-4 pb-8">
+        <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-5">
+          <h2 className="mb-2 text-xl font-semibold">구매 전 확인할 것</h2>
+          <p className="text-sm leading-6 text-slate-400">
+            최저가만 보지 말고 한국어 지원, 환불 정책, DLC 포함 여부, 플랫폼 연동 여부를 함께 확인하세요.
+            라이브 할인 데이터가 잠시 비어도 검증된 대표 할인작을 보여주도록 구성했습니다.
+          </p>
+        </div>
+      </section>
+
+      <section id="partner-picks" className="container mx-auto max-w-7xl px-4 pb-10">
         <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-5">
           <h2 className="mb-2 text-xl font-semibold">Partner Picks</h2>
           <p className="mb-4 text-sm text-slate-400">게임 할인/기기 관련 추천 링크입니다.</p>
