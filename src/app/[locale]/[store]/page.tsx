@@ -14,6 +14,11 @@ const STORE_INFO = {
     description: 'Steam 지역별 가격과 할인율을 확인하고 가장 저렴한 구매 타이밍을 찾으세요.',
     keywords: ['Steam sale', '스팀 할인', 'Steam regional price', 'Steam gift card'],
     picks: ['steam gift card', 'steam deck accessories', 'pc gaming controller'],
+    playbook: [
+      'Check the 30-day low before buying a headline sale because Steam publisher weekends often repeat the same discount.',
+      'Compare regional price movement with wish-list demand; a cheap key is not useful if it activates in the wrong region.',
+      'Bundle DLC only when the base game has active players and recent patches.'
+    ],
   },
   psn: {
     name: 'PlayStation Store',
@@ -21,6 +26,11 @@ const STORE_INFO = {
     description: 'PlayStation Store 할인과 기프트카드, 콘솔 게임 특가를 한눈에 확인하세요.',
     keywords: ['PSN sale', 'PlayStation sale', '플레이스테이션 할인', 'psn gift card'],
     picks: ['playstation gift card', 'dual sense controller', 'ps5 accessories'],
+    playbook: [
+      'Confirm whether the discount is for PS4, PS5, or cross-buy before checkout.',
+      'Use gift card pricing only after comparing the official store sale price.',
+      'For controller and headset deals, check warranty region and return policy before following a marketplace link.'
+    ],
   },
   xbox: {
     name: 'Xbox Store',
@@ -28,6 +38,11 @@ const STORE_INFO = {
     description: 'Xbox Store 할인, Game Pass 관련 딜, 컨트롤러 특가를 빠르게 살펴보세요.',
     keywords: ['Xbox sale', 'xbox game pass', '엑스박스 할인', 'xbox controller'],
     picks: ['xbox gift card', 'xbox controller', 'game pass ultimate'],
+    playbook: [
+      'Compare the game purchase price with Game Pass availability before buying.',
+      'Check whether a deal is for console, PC, or Play Anywhere entitlement.',
+      'For subscription deals, calculate the monthly equivalent after trial periods and renewal pricing.'
+    ],
   },
 } as const;
 
@@ -113,6 +128,23 @@ export default async function StorePage({ params }: Props) {
       </section>
 
       <section className="container mx-auto max-w-6xl px-4 py-8">
+        <div className="grid gap-4 rounded-xl border border-slate-800 bg-slate-900/70 p-5 md:grid-cols-[1.1fr_1fr]">
+          <div>
+            <h2 className="text-xl font-semibold">Deal decision checklist</h2>
+            <p className="mt-3 text-sm leading-6 text-slate-400">
+              This page is built as a real shopping checkpoint first, not a wall of outbound links. Use the store-specific notes below to decide whether a deal is worth opening, wish-listing, or skipping.
+            </p>
+          </div>
+          <ul className="space-y-2 text-sm leading-6 text-slate-300">
+            {info.playbook.map((item) => (
+              <li key={item}>- {item}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="container mx-auto max-w-6xl px-4 py-8">
+        <h2 className="mb-4 text-xl font-semibold">Useful searches after the price check</h2>
         <div className="grid gap-4 md:grid-cols-3">
           {info.picks.map((keyword) => (
             <article key={keyword} className="rounded-xl border border-slate-800 bg-slate-900/70 p-5">
