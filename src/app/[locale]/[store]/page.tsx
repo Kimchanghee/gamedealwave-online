@@ -153,13 +153,13 @@ export default async function StorePage({ params }: Props) {
                 가격 변동이 잦은 상품이라 지역가와 공식 스토어 가격을 함께 비교하는 것이 좋습니다.
               </p>
               <div className="mt-4 flex flex-wrap gap-2 text-sm">
-                <a className="rounded-lg border border-amber-400/40 px-3 py-2 text-amber-300 hover:border-amber-300" href={buildAmazonUrl(keyword)} target="_blank" rel="sponsored noopener noreferrer">
+                <a className="rounded-lg border border-amber-400/40 px-3 py-2 text-amber-300 hover:border-amber-300" href={buildAmazonUrl(keyword)} target="_blank" rel="sponsored noopener noreferrer nofollow" data-affiliate-link>
                   Amazon
                 </a>
-                <a className="rounded-lg border border-blue-400/40 px-3 py-2 text-blue-300 hover:border-blue-300" href={buildCoupangUrl(keyword)} target="_blank" rel="sponsored noopener noreferrer">
+                <a className="rounded-lg border border-blue-400/40 px-3 py-2 text-blue-300 hover:border-blue-300" href={buildCoupangUrl(keyword)} target="_blank" rel="sponsored noopener noreferrer nofollow" data-affiliate-link>
                   Coupang
                 </a>
-                <a className="rounded-lg border border-rose-400/40 px-3 py-2 text-rose-300 hover:border-rose-300" href={buildAliExpressUrl(keyword)} target="_blank" rel="sponsored noopener noreferrer">
+                <a className="rounded-lg border border-rose-400/40 px-3 py-2 text-rose-300 hover:border-rose-300" href={buildAliExpressUrl(keyword)} target="_blank" rel="sponsored noopener noreferrer nofollow" data-affiliate-link>
                   AliExpress
                 </a>
               </div>

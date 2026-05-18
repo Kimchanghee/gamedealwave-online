@@ -213,15 +213,15 @@ export default async function Home({ params }: Props) {
             배송, 환불 조건은 판매처 페이지에서 다시 확인하세요.
           </p>
           <div className="grid gap-3 sm:grid-cols-3">
-            <a className="rounded-lg border border-amber-400/40 bg-slate-950 p-4 hover:border-amber-300" href={buildAmazonUrl('steam gift card')} target="_blank" rel="sponsored noopener noreferrer">
+            <a className="rounded-lg border border-amber-400/40 bg-slate-950 p-4 hover:border-amber-300" href={buildAmazonUrl('steam gift card')} target="_blank" rel="sponsored noopener noreferrer nofollow" data-affiliate-link>
               <p className="text-xs font-semibold uppercase tracking-wide text-amber-300">Amazon</p>
               <p className="mt-1 text-sm">Steam Gift Card</p>
             </a>
-            <a className="rounded-lg border border-blue-400/40 bg-slate-950 p-4 hover:border-blue-300" href={buildCoupangUrl('플레이스테이션 기프트카드')} target="_blank" rel="sponsored noopener noreferrer">
+            <a className="rounded-lg border border-blue-400/40 bg-slate-950 p-4 hover:border-blue-300" href={buildCoupangUrl('플레이스테이션 기프트카드')} target="_blank" rel="sponsored noopener noreferrer nofollow" data-affiliate-link>
               <p className="text-xs font-semibold uppercase tracking-wide text-blue-300">Coupang</p>
               <p className="mt-1 text-sm">콘솔 기프트카드</p>
             </a>
-            <a className="rounded-lg border border-rose-400/40 bg-slate-950 p-4 hover:border-rose-300" href={buildAliExpressUrl('xbox controller')} target="_blank" rel="sponsored noopener noreferrer">
+            <a className="rounded-lg border border-rose-400/40 bg-slate-950 p-4 hover:border-rose-300" href={buildAliExpressUrl('xbox controller')} target="_blank" rel="sponsored noopener noreferrer nofollow" data-affiliate-link>
               <p className="text-xs font-semibold uppercase tracking-wide text-rose-300">AliExpress</p>
               <p className="mt-1 text-sm">Xbox Controller</p>
             </a>

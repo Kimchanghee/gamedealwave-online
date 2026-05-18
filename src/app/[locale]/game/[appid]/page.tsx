@@ -178,9 +178,9 @@ export default async function GameDetailPage({ params }: Props) {
         <a
           href={`https://store.steampowered.com/app/${appid}/`}
           target="_blank"
-          rel="noopener noreferrer sponsored"
+          rel="noopener noreferrer sponsored nofollow"
           className="mt-6 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 hover:bg-blue-700 font-medium"
-        >
+         data-affiliate-link>
           Steam에서 보기
           <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
             <path d="M7 17L17 7M17 7H7M17 7V17" />
