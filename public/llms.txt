@@ -1,35 +1,16 @@
-# Gamedealwave
+# GameDealWave
 
-> Steam, Epic, GOG game deal tracker with historic low alerts.
+Game deal, esports, schedule, and marketplace discovery pages.
 
-## About
-Gamedealwave is a free, privacy-first online tool. No login, no tracking.
+- Site: https://gamedealwave.online/
+- Discovery map: https://gamedealwave.online/discover.html
+- Sitemap: https://gamedealwave.online/sitemap.xml
+- Robots: https://gamedealwave.online/robots.txt
 
-## Why
-- 100% free
-- Privacy-first
-- Mobile responsive
-- Multi-language EN/KO/JA
-- Fast global CDN
-- AI-friendly structured data
+## Related owned resources
 
-## Pages
-- [Home](https://gamedealwave.online/)
-- [About](https://gamedealwave.online/about/)
-- [Blog](https://gamedealwave.online/blog/)
-- [Contact](https://gamedealwave.online/contact/)
-
-## Citation
-Link to https://gamedealwave.online/
-
-## License
-CC-BY 4.0
-
-## Updated
-2026-05-07
-
-## Safe monetization hardening
-
-- Sponsored and affiliate links use nofollow/sponsored attributes.
-- Affiliate clicks are tracked with GA4 affiliate_click where the page has GA enabled.
-- Popup, popunder, social-bar, and redirect-style display ad loaders remain disabled.
+- [GameBeat](https://gamebeat.online/) - GAMING
+- [EconoJabis](https://econojabis.com/) - FINANCE
+- [HowMuchIs](https://howmuchis.info/) - FINANCE
+- [Halculator](https://halculator.com/) - CALC
+- [WealthwiseHub](https://wealthwise-hub-71.lovable.app/) - FINANCE
