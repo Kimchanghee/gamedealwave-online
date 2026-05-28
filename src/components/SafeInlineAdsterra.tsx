@@ -3,7 +3,7 @@ type Props = {
   className?: string;
 };
 
-function pickAdsterraKey() {
+function pickSponsoredKey() {
   return (
     process.env.NEXT_PUBLIC_ADSTERRA_BANNER_300_KEY ||
     process.env.NEXT_PUBLIC_ADSTERRA_BANNER_KEY ||
@@ -17,8 +17,8 @@ function buildSrcDoc(key: string, width: number, height: number) {
   return `<!doctype html><html><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}body{display:grid;place-items:center;min-height:${height}px}#ad{width:${width}px;min-height:${height}px}</style></head><body><div id="ad"></div><script type="text/javascript">atOptions={'key':'${key}','format':'iframe','height':${height},'width':${width},'params':{}};<\/script><script type="text/javascript" src="https://www.highperformanceformat.com/${key}/invoke.js"><\/script></body></html>`;
 }
 
-export default function SafeInlineAdsterra({ placement = 'inline', className = '' }: Props) {
-  const key = pickAdsterraKey();
+export default function SafeInlineSponsored({ placement = 'inline', className = '' }: Props) {
+  const key = pickSponsoredKey();
   if (!key) return null;
   const width = 300;
   const height = 250;
