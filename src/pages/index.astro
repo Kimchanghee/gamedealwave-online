@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PriceTag from '../components/PriceTag.astro';
+import { site } from '../site.config.ts';
+import { graph, organization, website, isoDate } from '../lib/ld.ts';
+
+const guides = (await getCollection('guides')).sort((a, b) => +b.data.updated - +a.data.updated);
+const posts = (await getCollection('posts')).sort((a, b) => b.data.published.localeCompare(a.data.published));
+const title = 'GameDealWave: Console, Game and Gift Card Buying Checklists';
+const description = 'Buying checklists for consoles, game editions, gift cards, storage and controllers: region locks, edition contents, SSD specs and compatibility checks before you pay.';
+const ld = graph(organization(), website());
+let n = 0;
+---
+<Base title={title} description={description} path="/" ld={ld}>
+  <div class="wrap">
+    <section class="wallhead">
+      <div>
+        <p class="kicker">The price-tag wall</p>
+        <h1>Check the tag before you take it to the register.</h1>
+      </div>
+      <div>
+        <p class="wallhead__lede">{site.description} Every tag below is a checklist, not a price: we never show Amazon prices or stock, because those change by the minute and only the retailer can show them accurately.</p>
+        <p class="wallhead__meta">{guides.length} checklists · {posts.length} product picks · wall last restocked {site.siteUpdated}</p>
+      </div>
+    </section>
+    {site.categories.map((c) => {
+      const items = guides.filter((g) => g.data.category === c.slug);
+      return (
+        <section class="aisle" aria-labelledby={`a-${c.slug}`}>
+          <div class="aisle__sign"><span class="aisle__code">{c.code}</span><h2 id={`a-${c.slug}`}>{c.name}</h2><a href={`/category/${c.slug}/`}>whole aisle →</a></div>
+          {items.length === 0 ? <p class="empty">Nothing on this hook yet. New checklists are added as the backlog clears.</p> : (
+            <ul class="tags">
+              {items.map((g) => { n++; return <PriceTag href={`/guides/${g.data.slug}/`} code={c.code} title={g.data.title} question={g.data.question} lines={g.data.checklist.length} updated={isoDate(g.data.updated)} n={n} />; })}
+            </ul>
+          )}
+        </section>
+      );
+    })}
+    <section class="aisle" aria-labelledby="a-picks">
+      <div class="aisle__sign"><span class="aisle__code">NEW</span><h2 id="a-picks">Latest product picks</h2><a href="/picks/">all picks →</a></div>
+      {posts.length === 0 ? <p class="empty">No product picks are live yet. Picks start once each product link is checked against the exact model and option; until then the checklists above are the whole store.</p> : (
+        <ul class="ledger">{posts.slice(0, 8).map((p) => <li><a href={`/picks/${p.data.slug}/`}><span class="ledger__c">{p.data.published.slice(0, 10)}</span><span><span class="ledger__t">{p.data.title}</span><span class="ledger__q">{p.data.question}</span></span></a></li>)}</ul>
+      )}
+    </section>
+  </div>
+</Base>

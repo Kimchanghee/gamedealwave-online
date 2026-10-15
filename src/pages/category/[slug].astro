@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import { site } from '../../site.config.ts';
+import { graph, organization, breadcrumb } from '../../lib/ld.ts';
+export async function getStaticPaths() {
+  return site.categories.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c } = Astro.props;
+const guides = (await getCollection('guides')).filter((g) => g.data.category === c.slug);
+const posts = (await getCollection('posts')).filter((p) => p.data.category === c.slug);
+const crumbs = [{ name: 'Home', path: '/' }, { name: c.name, path: `/category/${c.slug}/` }];
+---
+<Base title={c.seoTitle} description={c.blurb} path={`/category/${c.slug}/`} ld={graph(organization(), breadcrumb(crumbs))}>
+  <div class="wrap page">
+    <Crumbs items={crumbs} />
+    <p class="kicker">Aisle {c.code}</p>
+    <h1>{c.name}</h1>
+    <p>{c.blurb}</p>
+    <h2>Checklists in this aisle</h2>
+    {guides.length ? <ul class="ledger">{guides.map((g) => <li><a href={`/guides/${g.data.slug}/`}><span class="ledger__c">{c.code}</span><span><span class="ledger__t">{g.data.title}</span><span class="ledger__q">{g.data.question}</span></span></a></li>)}</ul> : <p class="empty">No checklists here yet.</p>}
+    <h2>Product picks in this aisle</h2>
+    {posts.length ? <ul class="ledger">{posts.map((p) => <li><a href={`/picks/${p.data.slug}/`}><span class="ledger__c">{p.data.published.slice(0, 10)}</span><span><span class="ledger__t">{p.data.title}</span></span></a></li>)}</ul> : <p class="empty">No product picks in this aisle yet. Picks appear only after the product link is checked against the exact listing.</p>}
+    <p><a href="/guides/">All checklists</a> · <a href="/methodology/">How we pick products</a></p>
+  </div>
+</Base>

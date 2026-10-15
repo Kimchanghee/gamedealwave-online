@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import Receipt from '../../components/Receipt.astro';
+import Sources from '../../components/Sources.astro';
+import Faq from '../../components/Faq.astro';
+import { site } from '../../site.config.ts';
+import { graph, organization, breadcrumb, article, faqPage, isoDate } from '../../lib/ld.ts';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((g) => ({ params: { slug: g.data.slug }, props: { g, all: guides } }));
+}
+const { g, all } = Astro.props;
+const d = g.data;
+const { Content } = await render(g);
+const cat = site.categories.find((c) => c.slug === d.category)!;
+const path = `/guides/${d.slug}/`;
+const crumbs = [{ name: 'Home', path: '/' }, { name: cat.name, path: `/category/${cat.slug}/` }, { name: d.title, path }];
+const related = all.filter((x) => x.data.slug !== d.slug && x.data.category === d.category).concat(all.filter((x) => x.data.category !== d.category)).slice(0, 4);
+const nodes: object[] = [organization(), breadcrumb(crumbs), article({ headline: d.title, description: d.description, path, published: isoDate(d.published), modified: isoDate(d.updated), image: `/og/guides/${d.slug}.png` })];
+if (d.faq.length) nodes.push(faqPage(d.faq));
+---
+<Base title={d.seoTitle} description={d.description} path={path} ld={graph(...nodes)} ogImage={`/og/guides/${d.slug}.png`} ogType="article">
+  <div class="wrap">
+    <Crumbs items={crumbs} />
+    <div class="article">
+      <article class="sheet prose">
+        <p class="kicker">{cat.code} · Buying checklist</p>
+        <h1>{d.title}</h1>
+        <p class="byline">Updated <time datetime={isoDate(d.updated)}>{isoDate(d.updated)}</time> · facts checked {d.data_asof} · by the {site.name} desk</p>
+        <p class="answer" data-answer><strong>Short answer:</strong> {d.answer}</p>
+        <Receipt title={`Checkout slip: ${d.question}`} items={d.checklist} />
+        <Content />
+        <Faq faq={d.faq} />
+        <Sources sources={d.sources} asOf={d.data_asof} />
+      </article>
+      <aside class="article__rail" aria-label="More from this aisle">
+        <div class="railcard">
+          <h2>Same wall</h2>
+          <ul>{related.map((r) => <li><a href={`/guides/${r.data.slug}/`}>{r.data.title}</a></li>)}</ul>
+          <p><a href={`/category/${cat.slug}/`}>All {cat.name.toLowerCase()} checklists</a> · <a href="/methodology/">how we check facts</a></p>
+        </div>
+        <div class="adslot" aria-hidden="true"></div>
+      </aside>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import { site } from '../../site.config.ts';
+import { graph, organization, breadcrumb } from '../../lib/ld.ts';
+const guides = (await getCollection('guides')).sort((a, b) => a.data.category.localeCompare(b.data.category));
+const crumbs = [{ name: 'Home', path: '/' }, { name: 'Guides', path: '/guides/' }];
+---
+<Base title="All Buying Checklists for Consoles, Games and Accessories" description="Every GameDealWave buying checklist in one list: consoles, game editions, gift cards, storage and controllers, each with sources and the date its facts were last checked." path="/guides/" ld={graph(organization(), breadcrumb(crumbs))}>
+  <div class="wrap page">
+    <Crumbs items={crumbs} />
+    <h1>All buying checklists</h1>
+    <p>Evergreen guides that explain what to check before you buy. They contain no product links. See <a href="/methodology/">how facts are checked</a>.</p>
+    <ul class="ledger">{guides.map((g) => <li><a href={`/guides/${g.data.slug}/`}><span class="ledger__c">{site.categories.find((c) => c.slug === g.data.category)?.code}</span><span><span class="ledger__t">{g.data.title}</span><span class="ledger__q">{g.data.question}</span></span></a></li>)}</ul>
+  </div>
+</Base>

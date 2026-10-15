@@ -66,4 +66,9 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { guides, posts };
+const docs = defineCollection({
+  loader: glob({ pattern: '[^_]*.md', base: './src/content/docs' }),
+  schema: z.object({ title: z.string(), seoTitle: z.string(), description: z.string(), slug: z.string(), updated: z.coerce.date() }),
+});
+
+export const collections = { guides, posts, docs };

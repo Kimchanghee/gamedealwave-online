@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import { graph, organization, breadcrumb } from '../../lib/ld.ts';
+const posts = (await getCollection('posts')).sort((a, b) => b.data.published.localeCompare(a.data.published));
+const crumbs = [{ name: 'Home', path: '/' }, { name: 'Picks', path: '/picks/' }];
+---
+<Base title="Product Picks: Game Deals Checked Against the Exact Listing" description="Single-product picks for consoles, games, gift cards, storage and controllers. Each link is checked against the exact model and option before publishing, and no prices are shown." path="/picks/" ld={graph(organization(), breadcrumb(crumbs))}>
+  <div class="wrap page">
+    <Crumbs items={crumbs} />
+    <h1>Product picks</h1>
+    <p>One product per post, matched to the exact listing and option. Prices and stock are only shown on the retailer's page.</p>
+    {posts.length === 0 ? <p class="empty">No picks are live yet. Read the <a href="/guides/">buying checklists</a> while the first product links are checked, or see <a href="/methodology/">how picks are chosen</a>.</p> :
+      <ul class="ledger">{posts.map((p) => <li><a href={`/picks/${p.data.slug}/`}><span class="ledger__c">{p.data.published.slice(0, 10)}</span><span><span class="ledger__t">{p.data.title}</span><span class="ledger__q">{p.data.question}</span></span></a></li>)}</ul>}
+  </div>
+</Base>

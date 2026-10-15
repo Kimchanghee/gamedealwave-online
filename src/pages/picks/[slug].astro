@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Sources from '../../components/Sources.astro';
+import Faq from '../../components/Faq.astro';
+import { site, disclosureFor } from '../../site.config.ts';
+import { graph, organization, breadcrumb, article, faqPage } from '../../lib/ld.ts';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((p) => ({ params: { slug: p.data.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+const d = p.data;
+const { Content } = await render(p);
+const cat = site.categories.find((c) => c.slug === d.category)!;
+const path = `/picks/${d.slug}/`;
+const cover = d.images.find((i) => i.role === 'cover') ?? d.images[0];
+const crumbs = [{ name: 'Home', path: '/' }, { name: 'Picks', path: '/picks/' }, { name: d.title, path }];
+const nodes: object[] = [organization(), breadcrumb(crumbs), article({ headline: d.title, description: d.description, path, published: d.published, modified: d.updated, image: cover.src })];
+if (d.faq.length) nodes.push(faqPage(d.faq));
+---
+<Base title={d.seoTitle ?? d.title} description={d.description} path={path} ld={graph(...nodes)} ogImage={cover.src} ogType="article">
+  <div class="wrap">
+    <Crumbs items={crumbs} />
+    <div class="article">
+      <article class="sheet prose">
+        <p class="disclose" data-disclosure>{d.disclosure ?? disclosureFor(d.product.provider)}</p>
+        <p class="kicker">{cat.code} · Product pick</p>
+        <h1>{d.title}</h1>
+        <p class="byline">Published <time datetime={d.published}>{d.published.slice(0, 10)}</time> · updated {d.updated.slice(0, 10)} · link checked {d.product.verifiedAt.slice(0, 10)}</p>
+        <p class="answer" data-answer><strong>Short answer:</strong> {d.answer}</p>
+        <ProductCard product={d.product} variant="inline" />
+        <figure><img src={cover.src} alt={cover.alt} width="1200" height="675" loading="eager" /><figcaption class="byline">{cover.credit}</figcaption></figure>
+        <Content />
+        <ProductCard product={d.product} variant="end" />
+        <Faq faq={d.faq} />
+        <Sources sources={d.sources} asOf={d.data_asof} />
+      </article>
+      <aside class="article__rail" aria-label="Product">
+        <ProductCard product={d.product} variant="rail" />
+        <div class="adslot" aria-hidden="true"></div>
+      </aside>
+    </div>
+  </div>
+</Base>

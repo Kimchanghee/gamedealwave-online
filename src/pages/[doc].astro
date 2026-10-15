@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Crumbs from '../components/Crumbs.astro';
+import { graph, organization, breadcrumb, isoDate } from '../lib/ld.ts';
+export async function getStaticPaths() {
+  const docs = await getCollection('docs');
+  return docs.map((d) => ({ params: { doc: d.data.slug }, props: { d } }));
+}
+const { d } = Astro.props;
+const { Content } = await render(d);
+const path = `/${d.data.slug}/`;
+const crumbs = [{ name: 'Home', path: '/' }, { name: d.data.title, path }];
+---
+<Base title={d.data.seoTitle} description={d.data.description} path={path} ld={graph(organization(), breadcrumb(crumbs))}>
+  <div class="wrap page">
+    <Crumbs items={crumbs} />
+    <article class="sheet prose">
+      <h1>{d.data.title}</h1>
+      <p class="byline">Last updated <time datetime={isoDate(d.data.updated)}>{isoDate(d.data.updated)}</time></p>
+      <Content />
+    </article>
+  </div>
+</Base>
