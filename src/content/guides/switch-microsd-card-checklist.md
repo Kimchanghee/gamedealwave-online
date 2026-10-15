@@ -10,7 +10,7 @@ published: 2026-10-15
 updated: 2026-10-15
 data_asof: 2026-10-15
 checklist:
-  - Confirm which console you own: Switch, Switch OLED, Switch Lite, or Switch 2
+  - "Confirm which console you own: Switch, Switch OLED, Switch Lite, or Switch 2"
   - For Switch 2, the card must say microSD Express (look for the EX logo)
   - For the Switch 1 family, microSD, microSDHC or microSDXC (up to 2TB) all work
   - Check the capacity option selected on the listing

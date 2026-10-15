@@ -48,8 +48,9 @@ export function disclosureFor(provider: string): string {
   return 'This post contains links to a retailer. We may earn a commission if that link is an affiliate link.';
 }
 
+// Always the full set: harmless on untagged links, mandatory once the Associates tag is on (commerce gate checks it).
 export function productRel(): string {
-  return isAffiliateMode() ? 'sponsored nofollow noopener' : 'nofollow noopener';
+  return 'sponsored nofollow noopener';
 }
 
 export function productHref(raw: string): string {
