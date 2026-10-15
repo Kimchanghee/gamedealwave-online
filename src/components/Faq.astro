@@ -1,0 +1,12 @@
+---
+interface Props { faq: { q: string; a: string }[] }
+const { faq } = Astro.props;
+---
+{faq.length > 0 && (
+  <section class="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions buyers also ask</h2>
+    <dl>
+      {faq.map((f) => (<><dt>{f.q}</dt><dd>{f.a}</dd></>))}
+    </dl>
+  </section>
+)}

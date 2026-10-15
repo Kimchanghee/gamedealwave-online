@@ -1,0 +1,13 @@
+---
+interface Props { title: string; items: string[]; id?: string; note?: string }
+const { title, items, id = 'checklist', note } = Astro.props;
+---
+<section class="receipt" aria-labelledby={`${id}-h`}>
+  <p class="receipt__store" aria-hidden="true">GAMEDEALWAVE · CHECKOUT SLIP</p>
+  <h2 id={`${id}-h`} class="receipt__title">{title}</h2>
+  <ol class="receipt__lines">
+    {items.map((it, i) => <li><span class="receipt__n">{String(i + 1).padStart(2, '0')}</span><span>{it}</span></li>)}
+  </ol>
+  <p class="receipt__total"><span>LINES</span><span>{items.length}</span></p>
+  {note && <p class="receipt__note">{note}</p>}
+</section>

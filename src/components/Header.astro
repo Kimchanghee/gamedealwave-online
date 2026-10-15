@@ -1,0 +1,24 @@
+---
+import { site } from '../site.config.ts';
+interface Props { path: string }
+const { path } = Astro.props;
+const nav = [
+  ...site.categories.map((c) => ({ href: `/category/${c.slug}/`, label: c.name.split(' ')[0], code: c.code })),
+  { href: '/picks/', label: 'Picks', code: 'NEW' },
+];
+---
+<header class="shelf">
+  <div class="shelf__inner">
+    <a class="wordmark" href="/" aria-label={`${site.name} home`}>
+      <span class="wordmark__name">Game<b>Deal</b>Wave</span>
+      <span class="wordmark__sub">checkout checklists for console buyers</span>
+    </a>
+    <nav aria-label="Aisles">
+      <ul class="aisles">
+        {nav.map((n) => (
+          <li><a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}><span class="aisles__code" aria-hidden="true">{n.code}</span>{n.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

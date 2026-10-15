@@ -1,0 +1,14 @@
+---
+// A hanging price tag. Shows aisle code and the number of checklist lines, never a price.
+interface Props { href: string; code: string; title: string; question: string; lines: number; updated: string; n: number }
+const { href, code, title, question, lines, updated, n } = Astro.props;
+---
+<li class="tag" style={`--tilt:${(n % 3) - 1}`}>
+  <a href={href} class="tag__body">
+    <span class="tag__hole" aria-hidden="true"></span>
+    <span class="tag__code">{code} · No.{String(n).padStart(2, '0')}</span>
+    <span class="tag__title">{title}</span>
+    <span class="tag__q">{question}</span>
+    <span class="tag__foot"><span>{lines} checks</span><time datetime={updated}>upd {updated}</time></span>
+  </a>
+</li>

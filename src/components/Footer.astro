@@ -1,0 +1,38 @@
+---
+import { site, isAffiliateMode, AMAZON_STATEMENT, NO_TAG_STATEMENT } from '../site.config.ts';
+const year = site.siteUpdated.slice(0, 4);
+---
+<footer class="tally">
+  <div class="tally__inner">
+    <p class="tally__disclosure"><strong>Link notice.</strong> {isAffiliateMode() ? AMAZON_STATEMENT : NO_TAG_STATEMENT} <a href="/affiliate-disclosure/">How links work here</a>.</p>
+    <div class="tally__cols">
+      <div>
+        <p class="tally__head">Store directory</p>
+        <ul>
+          <li><a href="/guides/">All buying guides</a></li>
+          <li><a href="/picks/">Product picks</a></li>
+          {site.categories.map((c) => <li><a href={`/category/${c.slug}/`}>{c.name}</a></li>)}
+        </ul>
+      </div>
+      <div>
+        <p class="tally__head">House rules</p>
+        <ul>
+          <li><a href="/about/">About GameDealWave</a></li>
+          <li><a href="/methodology/">How we pick and check</a></li>
+          <li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="tally__head">Legal</p>
+        <ul>
+          <li><a href="/privacy/">Privacy policy</a></li>
+          <li><a href="/terms/">Terms of use</a></li>
+          <li><a href="/disclaimer/">Disclaimer</a></li>
+          <li><a href="/rss.xml">RSS feed</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="tally__fine">© {year} {site.name}. Not affiliated with Sony, Microsoft, Nintendo or Amazon. Product names are trademarks of their owners. <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>
+  </div>
+</footer>

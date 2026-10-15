@@ -1,30 +1,31 @@
 {
-  "name": "gamedealwave",
-  "version": "0.1.0",
+  "name": "gamedealwave-online",
+  "version": "2.0.0",
   "private": true,
-  "description": "Steam, PSN, Xbox game deal tracker (KR/EN/JA)",
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc --noEmit",
-    "fetch-deals": "tsx scripts/fetch-deals.ts",
-    "deploy": "npm run fetch-deals && npm run build && cdk deploy --require-approval never"
+    "dev": "astro dev",
+    "refresh": "node scripts/refresh.mjs",
+    "og": "node scripts/og.mjs",
+    "build": "node scripts/og.mjs && astro build",
+    "preview": "astro preview --port 4331",
+    "check": "astro check",
+    "gate": "node scripts/gate.mjs",
+    "gate:examples": "node scripts/gate-examples.mjs",
+    "test": "node --test tests/"
   },
   "dependencies": {
-    "next": "^15.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next-intl": "^3.20.0",
-    "tailwindcss": "^3.4.13"
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource/courier-prime": "^5.3.0",
+    "astro": "^5.18.2",
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
-    "@types/node": "^22.7.5",
-    "@types/react": "^19.0.0",
-    "typescript": "^5.6.3",
-    "tsx": "^4.19.1",
-    "@aws-sdk/client-dynamodb": "^3.665.0",
-    "@aws-sdk/lib-dynamodb": "^3.665.0",
-    "aws-cdk-lib": "^2.160.0"
+    "@astrojs/check": "^0.9.10",
+    "@resvg/resvg-js": "^2.6.2",
+    "node-html-parser": "^9.0.4",
+    "typescript": "^7.0.2"
   }
 }

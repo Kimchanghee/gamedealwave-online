@@ -1,0 +1,10 @@
+---
+interface Props { sources: { title: string; url: string }[]; asOf?: string }
+const { sources, asOf } = Astro.props;
+---
+<section class="sources" aria-labelledby="src-h">
+  <h2 id="src-h">Sources{asOf && <span class="sources__asof"> · facts checked {asOf}</span>}</h2>
+  <ol>
+    {sources.map((s) => <li><a href={s.url} rel="noopener">{s.title}</a> <span class="sources__host">{new URL(s.url).hostname}</span></li>)}
+  </ol>
+</section>

@@ -1,0 +1,24 @@
+---
+import { productHref, productRel, disclosureFor, isAffiliateMode } from '../site.config.ts';
+interface Props { product: { name: string; optionDetail: string; provider: string; url: string; landingHost: string; verifiedAt: string }; variant: 'rail' | 'inline' | 'end' }
+const { product, variant } = Astro.props;
+const href = productHref(product.url);
+const host = new URL(product.url).hostname;
+const label = product.provider === 'amazon' ? 'View this item on Amazon' : `View on ${product.landingHost}`;
+---
+{variant === 'end' ? (
+  <div class="endcta">
+    <p class="endcta__item">{product.name} <span>· {product.optionDetail}</span></p>
+    <a class="btn-checkout" href={href} rel={productRel()} data-outbound={host} data-cta="end">{label}</a>
+    <p class="endcta__fine">{disclosureFor(product.provider)}</p>
+  </div>
+) : (
+  <aside class={`ptag ptag--${variant}`} aria-label="Product this article covers">
+    <p class="ptag__kicker">On the tag</p>
+    <p class="ptag__name">{product.name}</p>
+    <p class="ptag__opt"><span>Option</span> {product.optionDetail}</p>
+    <p class="ptag__opt"><span>Link checked</span> {product.verifiedAt.slice(0, 10)}</p>
+    <a class="btn-checkout" href={href} rel={productRel()} data-outbound={host} data-cta={variant}>{label}</a>
+    <p class="ptag__fine">{isAffiliateMode() ? 'As an Amazon Associate I earn from qualifying purchases.' : 'Plain Amazon link, no affiliate tag.'} Price and stock are shown only on Amazon.</p>
+  </aside>
+)}
