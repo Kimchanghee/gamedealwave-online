@@ -1,6 +1,6 @@
 ---
 title: PS5 disc or Digital Edition, which should you buy?
-seoTitle: PS5 Disc vs Digital Edition: A Checklist Before You Buy One
+seoTitle: "PS5 Disc vs Digital Edition: A Checklist Before You Buy One"
 description: The PS5 Digital Edition and PS5 Pro have no disc drive; Sony sells an add-on drive that fits only some models. Check model numbers, your disc collection and the 2028 notice first.
 slug: ps5-disc-vs-digital-checklist
 question: Should I buy the PS5 with a disc drive or the Digital Edition?
@@ -29,7 +29,6 @@ faq:
   - q: Can I upgrade a PS4 game disc to the PS5 version on a Digital Edition?
     a: Sony says upgrading an eligible PS4 disc to its digital PS5 version needs a PS5 with a disc drive, and the disc must stay inserted to play.
 ---
-
 The PS5 is sold with and without a disc drive, and the difference is easy to miss in a listing title. The two versions play the same games and connect to the same PlayStation Store. What changes is how you can buy games, whether your existing discs work, and whether you can watch physical movies.
 
 ## What is actually different between the two?

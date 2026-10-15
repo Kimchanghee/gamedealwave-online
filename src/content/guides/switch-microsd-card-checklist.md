@@ -1,6 +1,6 @@
 ---
 title: Which microSD card works in a Switch or Switch 2?
-seoTitle: Switch microSD Card Checklist: Switch 1 vs Switch 2 Rules
+seoTitle: "Switch microSD Card Checklist: Switch 1 vs Switch 2 Rules"
 description: The original Switch takes microSD, microSDHC and microSDXC cards; Switch 2 saves games only to microSD Express cards. Check the card type, speed class and capacity before you buy.
 slug: switch-microsd-card-checklist
 question: Which microSD card should I buy for my Nintendo Switch?
@@ -29,7 +29,6 @@ faq:
   - q: Do I need a microSD card at all?
     a: Not always. If you mostly buy physical game cards and keep few downloads, the internal storage may be enough.
 ---
-
 Nintendo's two console generations use different microSD rules, and the cards look almost identical in a listing photo. Before buying, the first question is not capacity or brand, it is **which console the card is for**.
 
 ## What does the original Switch accept?

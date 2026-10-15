@@ -1,6 +1,6 @@
 ---
 title: Xbox Series storage card or USB drive?
-seoTitle: Xbox Series Storage: Expansion Card or USB Drive Checklist
+seoTitle: "Xbox Series Storage: Expansion Card or USB Drive Checklist"
 description: Xbox Series X|S games only run from internal storage or an official Storage Expansion Card. A USB drive stores them and plays older games. Here is how to pick the right one before you buy.
 slug: xbox-series-storage-checklist
 question: Should I buy an Xbox Storage Expansion Card or a USB drive?
@@ -27,7 +27,6 @@ faq:
   - q: Do Xbox One games run from a USB drive on Series X|S?
     a: Yes. Xbox One, Xbox 360 and original Xbox games can be played directly from a compatible USB 3.1 external drive.
 ---
-
 Xbox Series X and Series S consoles give you two ways to add space, and they do different jobs. Picking the wrong one is the most common storage regret: someone buys a large, inexpensive USB drive and then discovers their newest games will not launch from it.
 
 ## What is the difference between the two options?

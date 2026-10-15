@@ -1,6 +1,6 @@
 ---
 title: Standard, deluxe, collector's or game-key card?
-seoTitle: Game Edition Checklist: Deluxe, Collector's and Key Cards
+seoTitle: "Game Edition Checklist: Deluxe, Collector's and Key Cards"
 description: A game listing can be a disc, a cartridge, a code in a box, or a Switch 2 game-key card that only unlocks a download. Here is how to read editions and formats before you check out.
 slug: game-editions-checklist
 question: How do I know what I'm getting in a game edition listing?
@@ -29,7 +29,6 @@ faq:
   - q: Do deluxe editions include a better version of the game?
     a: Usually not. Deluxe editions typically add downloadable extras such as cosmetic items, soundtracks or season passes; check the listing for the exact list.
 ---
-
 A single game can appear in half a dozen listings: standard, deluxe, gold, ultimate, collector's, and for Nintendo Switch 2, a game-key card version. The box art is often identical. This checklist is about reading the listing so that what arrives matches what you expected.
 
 ## Which platform is the listing really for?
