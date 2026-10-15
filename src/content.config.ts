@@ -2,6 +2,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const source = z.object({ title: z.string().min(3), url: z.string().url() });
+const asof = z.union([z.string(), z.date()]).transform((v) => (typeof v === 'string' ? v : v.toISOString().slice(0, 10)));
 const faq = z.object({ q: z.string().min(5), a: z.string().min(10) });
 const category = z.enum(['consoles', 'games', 'gift-cards', 'storage', 'controllers']);
 
@@ -18,7 +19,7 @@ const guides = defineCollection({
     category,
     published: z.coerce.date(),
     updated: z.coerce.date(),
-    data_asof: z.string(),
+    data_asof: asof,
     sources: z.array(source).min(1),
     faq: z.array(faq).default([]),
     checklist: z.array(z.string()).min(3),
@@ -62,7 +63,7 @@ const posts = defineCollection({
     sources: z.array(source).min(1),
     faq: z.array(faq).default([]),
     disclosure: z.string().optional(),
-    data_asof: z.string().optional(),
+    data_asof: asof.optional(),
   }),
 });
 
