@@ -1,7 +1,7 @@
 ---
 title: Will this M.2 SSD work in a PS5?
 seoTitle: "PS5 M.2 SSD Checklist: Will This Drive Fit and Run Games?"
-description: "Before buying a PS5 SSD, check the five things Sony lists: PCIe Gen4 x4 NVMe, 250GB to 8TB, an M.2 2230 to 22110 size, 5,500MB/s reads, and a heatsink that fits."
+description: "Before buying a PS5 SSD, check what Sony lists: PCIe Gen4 x4 NVMe, 250GB to 8TB, M.2 2230 to 22110, 5,500MB/s reads, and a heatsink that fits the slot."
 slug: ps5-m2-ssd-checklist
 question: Will this M.2 SSD work in my PS5?
 answer: A PS5 M.2 SSD must be a PCIe Gen4 x4 NVMe drive of 250GB to 8TB, in an M.2 2230 to 22110 size, and Sony recommends 5,500MB/s sequential reads. It also needs a heatsink or cooling structure that fits the slot.

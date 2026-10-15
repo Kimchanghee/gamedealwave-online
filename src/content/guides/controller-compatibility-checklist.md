@@ -1,7 +1,7 @@
 ---
 title: Will this controller work with my console?
 seoTitle: "Controller Compatibility Checklist: PS5, Xbox and Switch 2"
-description: A DualShock 4 plays PS4 games on PS5 but not PS5 games, and Switch 2 accepts some Switch controllers. Check platform, licensing, connection and power before buying a pad.
+description: "A DualShock 4 plays PS4 games on PS5 but not PS5 games. Check platform, licensing, connection type and battery before you buy a controller for any console."
 slug: controller-compatibility-checklist
 question: Will this controller work with my PS5, Xbox or Switch?
 answer: Match the controller to the console generation and the games you play. On PS5, a DualShock 4 works only with supported PS4 games, while DualSense and officially licensed pads work with PS5 games. Check licensing, wired or wireless connection, and battery type before you buy.

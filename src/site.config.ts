@@ -23,15 +23,15 @@ export const site = {
   providerAllowlist: { amazon: ['www.amazon.com', 'amazon.com', 'amzn.to'] } as Record<string, string[]>,
   categories: [
     { slug: 'consoles', name: 'Consoles', code: 'CON', seoTitle: 'Console Buying Checklists: Models, Bundles and Region Checks',
-      blurb: 'Checklists for buying a PlayStation, Xbox or Nintendo console: model revisions, disc versus digital editions, bundle contents, refurbished listings and what to confirm before checkout.' },
+      blurb: "Checklists for buying a PlayStation, Xbox or Nintendo console: model numbers, disc versus digital editions, bundle contents, and what to confirm at checkout." },
     { slug: 'games', name: 'Games & editions', code: 'GAM', seoTitle: 'Game Edition Checklists: Standard, Deluxe and Digital Codes',
-      blurb: 'How to read game listings before you buy: standard versus deluxe and collector editions, digital code platforms and regions, physical versions that still need downloads, and upgrade paths.' },
+      blurb: "How to read game listings before you buy: standard, deluxe and collector editions, codes in a box, Switch 2 game-key cards, and PS4 to PS5 upgrade rules." },
     { slug: 'gift-cards', name: 'Gift cards & wallet funds', code: 'GFT', seoTitle: 'Gaming Gift Card Checklists: Regions, Limits and Scam Signs',
-      blurb: 'Checklists for PlayStation Store, Xbox, Nintendo eShop and Steam gift cards: region matching, wallet limits, delivery formats, and the scam patterns that official support pages warn about.' },
+      blurb: "Checklists for PlayStation, Xbox, Nintendo eShop and Steam gift cards: region matching, delivery formats, and the scam patterns the FTC warns shoppers about." },
     { slug: 'storage', name: 'Storage', code: 'STO', seoTitle: 'Console Storage Checklists: PS5 SSDs, Xbox Cards, microSD',
-      blurb: 'Storage checklists for consoles: PS5 M.2 SSD requirements and heatsinks, Xbox Series expansion cards versus USB drives, and Nintendo Switch microSD card types and speeds.' },
-    { slug: 'controllers', name: 'Controllers', code: 'CTL', seoTitle: 'Controller Buying Checklists: Compatibility, Drift, Batteries',
-      blurb: 'Controller checklists: platform compatibility, official versus licensed pads, wired versus wireless latency, battery types, drift and repair options, and what a pro-style controller adds.' },
+      blurb: "Storage checklists for consoles: PS5 M.2 SSD rules and heatsink limits, Xbox Series expansion cards versus USB drives, and Switch microSD Express cards." },
+    { slug: 'controllers', name: 'Controllers', code: 'CTL', seoTitle: 'Controller Checklists: Compatibility, Drift and Batteries',
+      blurb: "Controller checklists: platform compatibility, official versus licensed pads, wired or wireless, battery types, stick drift, and what pro controllers add." },
   ],
 };
 

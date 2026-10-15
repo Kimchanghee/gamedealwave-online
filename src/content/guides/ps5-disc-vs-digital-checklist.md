@@ -1,7 +1,7 @@
 ---
 title: PS5 disc or Digital Edition, which should you buy?
 seoTitle: "PS5 Disc vs Digital Edition: A Checklist Before You Buy One"
-description: The PS5 Digital Edition and PS5 Pro have no disc drive; Sony sells an add-on drive that fits only some models. Check model numbers, your disc collection and the 2028 notice first.
+description: "The PS5 Digital Edition and PS5 Pro have no disc drive, and the add-on drive fits only some models. Check model numbers and your disc library before buying."
 slug: ps5-disc-vs-digital-checklist
 question: Should I buy the PS5 with a disc drive or the Digital Edition?
 answer: Buy a PS5 with a disc drive if you own PS4 or PS5 discs, buy used games, or watch Blu-ray. Choose the Digital Edition if you buy everything from PlayStation Store. The add-on Disc Drive fits only Digital Edition slim models and PS5 Pro.

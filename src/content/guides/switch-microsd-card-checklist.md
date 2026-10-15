@@ -1,7 +1,7 @@
 ---
 title: Which microSD card works in a Switch or Switch 2?
 seoTitle: "Switch microSD Card Checklist: Switch 1 vs Switch 2 Rules"
-description: The original Switch takes microSD, microSDHC and microSDXC cards; Switch 2 saves games only to microSD Express cards. Check the card type, speed class and capacity before you buy.
+description: "The original Switch takes microSD, SDHC and SDXC cards; Switch 2 saves games only to microSD Express. Check card type and capacity before you buy one."
 slug: switch-microsd-card-checklist
 question: Which microSD card should I buy for my Nintendo Switch?
 answer: For an original Switch, Switch OLED or Switch Lite, a microSDXC card from 64GB up to 2TB is the usual choice. For a Nintendo Switch 2, buy a microSD Express card, because Switch 2 only saves and runs games from microSD Express.

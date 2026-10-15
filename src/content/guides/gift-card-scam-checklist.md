@@ -1,7 +1,7 @@
 ---
 title: How to spot a gaming gift card scam
 seoTitle: "Gaming Gift Card Scam Checklist: Red Flags Before You Buy"
-description: Gift cards are a favorite payment method for scammers because the money is hard to trace. Use these FTC-based checks on packaging, sellers and requests before you buy or share a code.
+description: "Scammers love gift cards because money is hard to trace. Use these FTC-based checks on packaging, sellers and code requests before you buy or share a code."
 slug: gift-card-scam-checklist
 question: How can I tell if a gaming gift card deal or request is a scam?
 answer: Anyone who demands payment by gift card is a scammer, according to the FTC. For buying, avoid tampered packaging, unknown resellers offering big discounts, and anyone asking for the code before you have used it. Keep the receipt and report fraud quickly.

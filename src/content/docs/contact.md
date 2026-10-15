@@ -1,7 +1,7 @@
 ---
 title: Contact
 seoTitle: "Contact GameDealWave: Corrections, Questions and Requests"
-description: How to contact GameDealWave for corrections, questions about a buying checklist, product link problems, privacy requests, or partnership enquiries, with the single email address we use.
+description: "Contact GameDealWave for corrections, wrong product links, privacy requests or topic ideas. One email address, and what we can and cannot help you with."
 slug: contact
 updated: 2026-10-15
 ---

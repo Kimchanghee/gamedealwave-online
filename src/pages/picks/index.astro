@@ -6,7 +6,7 @@ import { graph, organization, breadcrumb } from '../../lib/ld.ts';
 const posts = (await getCollection('posts')).sort((a, b) => b.data.published.localeCompare(a.data.published));
 const crumbs = [{ name: 'Home', path: '/' }, { name: 'Picks', path: '/picks/' }];
 ---
-<Base title="Product Picks: Game Deals Checked Against the Exact Listing" description="Single-product picks for consoles, games, gift cards, storage and controllers. Each link is checked against the exact model and option before publishing, and no prices are shown." path="/picks/" ld={graph(organization(), breadcrumb(crumbs))}>
+<Base title="Product Picks: Game Deals Checked Against the Exact Listing" description="Single-product picks for consoles, games, gift cards, storage and controllers. Each link is matched to the exact model and option first; no prices shown." path="/picks/" ld={graph(organization(), breadcrumb(crumbs))}>
   <div class="wrap page">
     <Crumbs items={crumbs} />
     <h1>Product picks</h1>

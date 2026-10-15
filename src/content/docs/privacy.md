@@ -1,7 +1,7 @@
 ---
 title: Privacy policy
 seoTitle: "Privacy Policy: Analytics, Ads and Cookies on GameDealWave"
-description: What GameDealWave collects, how Google Analytics 4 and Google AdSense use cookies, how consent works for EEA, UK and Swiss visitors, and how you can opt out of personalised ads.
+description: "What GameDealWave collects, how Google Analytics 4 and AdSense use cookies, consent for EEA, UK and Swiss visitors, and how to opt out of personalized ads."
 slug: privacy
 updated: 2026-10-15
 ---

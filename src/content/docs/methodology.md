@@ -1,7 +1,7 @@
 ---
 title: How we pick products and check facts
-seoTitle: "Methodology: How GameDealWave Picks Products and Checks Facts"
-description: The exact process GameDealWave uses to research buyer questions, choose a product, confirm the listing matches the model and option, and source every specification it prints.
+seoTitle: "Methodology: How GameDealWave Picks and Checks Products"
+description: "The process GameDealWave uses to research buyer questions, choose a product, confirm the listing matches the exact model, and source every spec it prints."
 slug: methodology
 updated: 2026-10-15
 ---

@@ -1,7 +1,7 @@
 ---
 title: About GameDealWave
 seoTitle: "About GameDealWave: Who Writes These Buying Checklists"
-description: GameDealWave is an independent buying-checklist site for console, game, gift card, storage and controller purchases. Here is who runs it, why, and the editorial rules it follows.
+description: "GameDealWave is an independent buying-checklist site for consoles, games, gift cards, storage and controllers. Who runs it, why, and the rules it follows."
 slug: about
 updated: 2026-10-15
 ---

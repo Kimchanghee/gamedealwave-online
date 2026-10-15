@@ -1,7 +1,7 @@
 ---
 title: Disclaimer
 seoTitle: "Disclaimer: Limits of GameDealWave Buying Information Pages"
-description: "The limits of GameDealWave's buying information: facts dated to when they were checked, no prices shown, platform policies that can change, and no responsibility for third-party listings."
+description: "The limits of GameDealWave buying information: facts are dated, no prices are shown, platform rules can change, and retail listings are not controlled by us."
 slug: disclaimer
 updated: 2026-10-15
 ---

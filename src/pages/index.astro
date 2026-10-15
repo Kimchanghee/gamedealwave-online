@@ -8,7 +8,7 @@ import { graph, organization, website, isoDate } from '../lib/ld.ts';
 const guides = (await getCollection('guides')).sort((a, b) => +b.data.updated - +a.data.updated);
 const posts = (await getCollection('posts')).sort((a, b) => b.data.published.localeCompare(a.data.published));
 const title = 'GameDealWave: Console, Game and Gift Card Buying Checklists';
-const description = 'Buying checklists for consoles, game editions, gift cards, storage and controllers: region locks, edition contents, SSD specs and compatibility checks before you pay.';
+const description = "Buying checklists for consoles, game editions, gift cards, storage and controllers: region locks, edition contents and SSD specs to check before you pay.";
 const ld = graph(organization(), website());
 let n = 0;
 ---

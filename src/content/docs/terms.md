@@ -1,7 +1,7 @@
 ---
 title: Terms of use
 seoTitle: Terms of Use for GameDealWave Buying Checklists and Picks
-description: "The terms for using GameDealWave: information only, no warranty on third-party listings, links to external retailers, trademarks, permitted use of content, and how these terms can change."
+description: "Terms for using GameDealWave: information only, no warranty on third-party listings, links to external retailers, trademarks, and permitted use of content."
 slug: terms
 updated: 2026-10-15
 ---

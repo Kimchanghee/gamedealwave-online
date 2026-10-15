@@ -1,7 +1,7 @@
 ---
 title: Will this gaming gift card work on my account?
 seoTitle: "Gaming Gift Card Region Checklist: PlayStation, Xbox, eShop"
-description: PlayStation, Xbox and Nintendo gift cards are tied to a country or region. Match the card to your account region, check the delivery format and the seller before you pay.
+description: "PlayStation, Xbox and Nintendo gift cards are tied to a region. Match the card to your account region and check delivery format and seller before you pay."
 slug: gift-card-region-checklist
 question: Will a PlayStation, Xbox or Nintendo gift card work on my account?
 answer: Usually only if the card was issued for the same country or region as your account. Check the region printed on the listing, match it to your account settings, and buy from a seller that will help if the code fails. Platform support cannot convert a wrong-region card.

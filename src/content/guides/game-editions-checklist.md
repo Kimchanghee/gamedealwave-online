@@ -1,7 +1,7 @@
 ---
 title: Standard, deluxe, collector's or game-key card?
 seoTitle: "Game Edition Checklist: Deluxe, Collector's and Key Cards"
-description: A game listing can be a disc, a cartridge, a code in a box, or a Switch 2 game-key card that only unlocks a download. Here is how to read editions and formats before you check out.
+description: "A game listing can be a disc, a code in a box, or a Switch 2 game-key card that only unlocks a download. How to read editions and formats before checkout."
 slug: game-editions-checklist
 question: How do I know what I'm getting in a game edition listing?
 answer: Read three things in the listing - the platform, the format (disc or cartridge with data, code in a box, or a Switch 2 game-key card that needs a download), and the edition contents. Deluxe and collector's editions add extras; they do not always include more game.
