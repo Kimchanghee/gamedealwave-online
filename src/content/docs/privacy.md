@@ -17,11 +17,11 @@ When enabled, we use Google Analytics 4 to count visits and see which pages and 
 
 ## Google AdSense and third-party cookies
 
-Pages may show ads served by Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads based on those visits. You can opt out of personalised advertising in [Google Ads Settings](https://adssettings.google.com/), and you can opt out of some third-party vendors' cookies at [aboutads.info](https://www.aboutads.info/choices/).
+Ad loading is currently disabled by default: this site does not load Google AdSense scripts or show ads while the ad account and consent setup are pending. If ads are enabled later, pages may show ads served by Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads based on those visits. You can opt out of personalised advertising in [Google Ads Settings](https://adssettings.google.com/), and you can opt out of some third-party vendors' cookies at [aboutads.info](https://www.aboutads.info/choices/).
 
 ## Consent in the EEA, UK and Switzerland
 
-For visitors in the European Economic Area, the United Kingdom and Switzerland, analytics and advertising storage are **denied by default** (Google Consent Mode v2) until you make a choice in the consent message shown by Google's certified consent management platform. You can change your choice at any time from the privacy link in that message.
+For visitors in the European Economic Area, the United Kingdom and Switzerland, analytics and advertising storage are **denied by default** (Google Consent Mode v2) until a choice is made. No consent banner or certified consent management platform is currently configured on this site; these defaults are Consent Mode signals only, and one will be added and described here before ads are enabled.
 
 ## Product links
 

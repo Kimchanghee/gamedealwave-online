@@ -23,6 +23,18 @@ const sitemapLocs = new Set([...sitemapXml.matchAll(/<loc>(.*?)<\/loc>/g)].map((
 if (!sitemapLocs.size) fail('sitemap', 'no sitemap locs found');
 for (const f of ['robots.txt', 'ads.txt', 'llms.txt', 'rss.xml', 'sitemap-index.xml', `${site.indexNowKey}.txt`]) if (!existsSync(join(DIST, f))) fail('site', `missing /${f}`);
 if (existsSync(join(DIST, 'ads.txt')) && !readFileSync(join(DIST, 'ads.txt'), 'utf8').includes('pub-4490818204529253')) fail('ads.txt', 'wrong publisher');
+
+// Ads gate: AdSense loader must be absent unless PUBLIC_ADS_ENABLED=true; verification meta and ads.txt stay regardless.
+{
+  const adsOn = process.env.PUBLIC_ADS_ENABLED === 'true';
+  for (const f of walk(DIST).filter((f) => f.endsWith('.html'))) {
+    const h = readFileSync(f, 'utf8');
+    const loader = /pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js/.test(h) || /class="adsbygoogle"/.test(h);
+    const rel = f.slice(DIST.length);
+    if (!adsOn && loader) fail(rel, 'AdSense loader/ad unit present while PUBLIC_ADS_ENABLED is not true');
+    if (adsOn && !/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-4490818204529253/.test(h)) fail(rel, 'ads enabled but AdSense loader missing');
+  }
+}
 if (existsSync(join(DIST, 'robots.txt')) && /Disallow:\s*\/\s*$/m.test(readFileSync(join(DIST, 'robots.txt'), 'utf8'))) fail('robots.txt', 'blocks crawling');
 
 const pages = walk(DIST);
