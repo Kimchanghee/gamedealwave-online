@@ -45,15 +45,9 @@ must match the platform holder's support page; cite it in `sources`.
 - Every image: real file, descriptive `alt` (≥ 8 chars, says what is shown), `role`, `credit`.
 - Illustrations must not pretend to be product photos.
 
-## 6. Gate, publish, verify
-```powershell
-pnpm build; node scripts/gate.mjs --slug <slug>        # must print GATE PASS
-pwsh -File scripts/publish.ps1 -Slug <slug> -DryRun     # rehearsal
-pwsh -File scripts/publish.ps1 -Slug <slug>             # deploy + live verify + IndexNow + log
-```
-`publish.ps1` refuses a slug already in `ops/publish-log.jsonl`. If live verification fails, the page may be
-deployed but is NOT logged: fix and re-run, do not create a second slug.
-Commit the post, its images, evidence note and the log line.
+## 6. Local-only rehearsal (production disabled)
+
+See `LOCAL-PUBLISHER.md`. `publish.ps1` requires `-DryRun` and uses isolated temporary staging. Fixture tests additionally require `-Fixture`. No account calls, deploy, IndexNow, live receipt or scheduler activation occurs. Production publication is blocked pending real product/editorial evidence, account eligibility and separately verified production controls.
 
 ## Post template
 ```markdown
