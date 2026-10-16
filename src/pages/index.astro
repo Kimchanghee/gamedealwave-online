@@ -21,9 +21,10 @@ let n = 0;
       </div>
       <div>
         <p class="wallhead__lede">{site.description} Every tag below is a checklist, not a price: we never show Amazon prices or stock, because those change by the minute and only the retailer can show them accurately.</p>
-        <p class="wallhead__meta">{guides.length} checklists · {posts.length} product picks · wall last restocked {site.siteUpdated}</p>
+        <p class="wallhead__meta">{guides.length} checklists on {site.categories.length} hooks{posts.length > 0 && ` · ${posts.length} product picks`} · wall last restocked {site.siteUpdated}</p>
       </div>
     </section>
+    <div class="wall">
     {site.categories.map((c) => {
       const items = guides.filter((g) => g.data.category === c.slug);
       return (
@@ -37,6 +38,7 @@ let n = 0;
         </section>
       );
     })}
+    </div>
     <section class="aisle" aria-labelledby="a-picks">
       <div class="aisle__sign"><span class="aisle__code">NEW</span><h2 id="a-picks">Latest product picks</h2><a href="/picks/">all picks →</a></div>
       {posts.length === 0 ? <p class="empty">No product picks are live yet. Picks start once each product link is checked against the exact model and option; until then the checklists above are the whole store.</p> : (
