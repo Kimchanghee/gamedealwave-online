@@ -15,7 +15,7 @@ export function fingerprint(base) {
     if (st.isDirectory()) { h.update(`dir:${rel}\n`); for (const n of readdirSync(p).sort()) walk(join(p,n), `${rel}/${n}`); }
     else { h.update(`file:${rel}\0`); h.update(readFileSync(p)); }
   }
-  for (const n of ['src','public','dist','.astro','ops/publish-log.jsonl','node_modules/.astro']) walk(join(base,n), n);
+  for (const n of ['src','public','dist','.astro','ops/publish-log.jsonl','node_modules/.astro','node_modules/.vite','node_modules/.cache']) walk(join(base,n), n);
   return h.digest('hex');
 }
 function run(cwd, args, env, expected = 0) {
@@ -24,19 +24,14 @@ function run(cwd, args, env, expected = 0) {
   return r.stdout;
 }
 function copyDependencies(source, destination) {
-  function copy(p, q) {
-    const st=lstatSync(p);
-    if(st.isSymbolicLink()) {
-      const target=resolve(dirname(p),readlinkSync(p));
-      const rel=relative(source,target);
-      if(rel.startsWith('..') || /^[A-Za-z]:/.test(rel)) throw new Error('Dependency link escapes source tree');
-      symlinkSync(join(destination,rel),q,'junction');
-    } else if(st.isDirectory()) {
-      mkdirSync(q,{recursive:true});
-      for(const n of readdirSync(p)) if(!['.astro','.cache'].includes(n)) copy(join(p,n),join(q,n));
-    } else cpSync(p,q);
+  mkdirSync(destination,{recursive:true});
+  for(const n of readdirSync(source)) {
+    if (['.astro','.vite','.cache'].includes(n)) continue;
+    const p=join(source,n), q=join(destination,n);
+    if(lstatSync(p).isDirectory() || lstatSync(p).isSymbolicLink()) symlinkSync(p,q,'junction');
+    else cpSync(p,q);
   }
-  copy(source,destination);
+  for(const n of ['.astro','.vite','.cache']) mkdirSync(join(destination,n),{recursive:true});
 }
 export function dryRun({ fixture, slug, fault } = {}) {
   if (!fixture && !slug) throw new Error('Fail closed: provide --fixture explicitly or --slug for an existing real post');
@@ -59,7 +54,8 @@ export function dryRun({ fixture, slug, fault } = {}) {
     if (fixture) {
       cpSync(join(temp,'src/content/posts/_examples/pass-example.md'),join(temp,'src/content/posts/qa-staged-example.md'));
       cpSync(join(temp,'src/content/posts/_examples/assets/example-cover.svg'),join(temp,'public/example-cover.svg'));
-      slug=readFileSync(join(temp,'src/content/posts/qa-staged-example.md'),'utf8').match(/^slug:\s*(\S+)/m)[1];
+      const stagedFile=join(temp,'src/content/posts/qa-staged-example.md');
+      slug=readFileSync(stagedFile,'utf8').match(/^slug:\s*(\S+)/m)[1];
     } else {
       const dir=join(temp,'src/content/posts');
       const posts=readdirSync(dir).filter(f=>f.endsWith('.md')&&!f.startsWith('_'));
