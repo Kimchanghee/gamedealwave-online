@@ -16,7 +16,7 @@ export function splitMd(raw) {
   return { fm: parseYaml(parts[1] ?? '') ?? {}, body: parts.slice(2).join('---') };
 }
 export function words(text) {
-  return (String(text).replace(/[#>*_`\[\]()|-]/g, ' ').match(/[A-Za-z0-9'’]+/g) ?? []).length;
+  return (String(text).replace(/\]\([^)]*\)/g, ']').replace(/https?:\/\/\S+/g, ' ').replace(/[#>*_`\[\]()|-]/g, ' ').match(/[A-Za-z0-9'’]+/g) ?? []).length;
 }
 const len = (s) => [...String(s ?? '')].length;
 

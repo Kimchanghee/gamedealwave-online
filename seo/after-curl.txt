@@ -1,0 +1,79 @@
+# AFTER evidence: curl (no JS) against http://127.0.0.1:4332, captured 2026-10-16T09:25:54+09:00
+
+GET /robots.txt -> 200 text/plain
+GET /sitemap-index.xml -> 200 text/xml
+GET /sitemap-0.xml -> 200 text/xml
+GET /llms.txt -> 200 text/plain
+GET /rss.xml -> 200 text/xml
+GET /ads.txt -> 200 text/plain
+GET /no-such-page-x/ -> 404 text/html
+
+## robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://gamedealwave.online/sitemap-index.xml
+
+## sitemap-index.xml
+<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://gamedealwave.online/sitemap-0.xml</loc><lastmod>2026-10-15T00:00:00.000Z</lastmod></sitemap></sitemapindex>
+sitemap-0.xml: 23 URLs, newest lastmod 2026-10-15T00:00:00.000Z
+
+## llms.txt (first 8 lines)
+# GameDealWave
+
+> GameDealWave writes buying checklists for consoles, games, gift cards, storage and controllers, so you can tell whether a listing fits your console before you pay.
+
+Link policy: Product links go to Amazon product pages without an affiliate tag. We earn nothing from them today; if that changes, this notice changes first. We never show Amazon prices, stock or star ratings.
+
+## Buying checklists
+- [Will this controller work with my console?](https://gamedealwave.online/guides/controller-compatibility-checklist/): Match the controller to the console generation and the games you play. On PS5, a DualShock 4 works only with supported PS4 games, while DualSense and officially licensed pads work with PS5 games. Check licensing, wired or wireless connection, and battery type before you buy.
+
+## /  [200]
+title (59): GameDealWave: Console, Game and Gift Card Buying Checklists
+description (153): Buying checklists for consoles, game editions, gift cards, storage and controllers: region locks, edition contents and SSD specs to check before you pay.
+canonical: https://gamedealwave.online/
+robots: index, follow, max-image-preview:large
+h1 count: 1 · main words (server HTML): 376
+JSON-LD @types: Organization,WebSite
+og:image: https://gamedealwave.online/og/home.png
+adsense meta: True · adsbygoogle script: True
+
+## /guides/ps5-m2-ssd-checklist/  [200]
+title (57): PS5 M.2 SSD Checklist: Will This Drive Fit and Run Games?
+description (151): Before buying a PS5 SSD, check what Sony lists: PCIe Gen4 x4 NVMe, 250GB to 8TB, M.2 2230 to 22110, 5,500MB/s reads, and a heatsink that fits the slot.
+canonical: https://gamedealwave.online/guides/ps5-m2-ssd-checklist/
+robots: index, follow, max-image-preview:large
+h1 count: 1 · main words (server HTML): 1074
+JSON-LD @types: Organization,BreadcrumbList,Article,FAQPage
+og:image: https://gamedealwave.online/og/guides/ps5-m2-ssd-checklist.png
+adsense meta: True · adsbygoogle script: True
+
+## /category/storage/  [200]
+title (57): Console Storage Checklists: PS5 SSDs, Xbox Cards, microSD
+description (152): Storage checklists for consoles: PS5 M.2 SSD rules and heatsink limits, Xbox Series expansion cards versus USB drives, and Switch microSD Express cards.
+canonical: https://gamedealwave.online/category/storage/
+robots: index, follow, max-image-preview:large
+h1 count: 1 · main words (server HTML): 124
+JSON-LD @types: Organization,BreadcrumbList
+og:image: https://gamedealwave.online/og/home.png
+adsense meta: True · adsbygoogle script: True
+
+## /methodology/  [200]
+title (55): Methodology: How GameDealWave Picks and Checks Products
+description (154): The process GameDealWave uses to research buyer questions, choose a product, confirm the listing matches the exact model, and source every spec it prints.
+canonical: https://gamedealwave.online/methodology/
+robots: index, follow, max-image-preview:large
+h1 count: 1 · main words (server HTML): 362
+JSON-LD @types: Organization,BreadcrumbList
+og:image: https://gamedealwave.online/og/home.png
+adsense meta: True · adsbygoogle script: True
+
+## /picks/  [200]
+title (59): Product Picks: Game Deals Checked Against the Exact Listing
+description (153): Single-product picks for consoles, games, gift cards, storage and controllers. Each link is matched to the exact model and option first; no prices shown.
+canonical: https://gamedealwave.online/picks/
+robots: index, follow, max-image-preview:large
+h1 count: 1 · main words (server HTML): 47
+JSON-LD @types: Organization,BreadcrumbList
+og:image: https://gamedealwave.online/og/home.png
+adsense meta: True · adsbygoogle script: True

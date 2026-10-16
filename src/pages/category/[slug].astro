@@ -12,7 +12,7 @@ const guides = (await getCollection('guides')).filter((g) => g.data.category ===
 const posts = (await getCollection('posts')).filter((p) => p.data.category === c.slug);
 const crumbs = [{ name: 'Home', path: '/' }, { name: c.name, path: `/category/${c.slug}/` }];
 ---
-<Base title={c.seoTitle} description={c.blurb} path={`/category/${c.slug}/`} ld={graph(organization(), breadcrumb(crumbs))}>
+<Base title={c.seoTitle} description={c.blurb} path={`/category/${c.slug}/`} ogImage={`/og/category/${c.slug}.png`} ld={graph(organization(), breadcrumb(crumbs))}>
   <div class="wrap page">
     <Crumbs items={crumbs} />
     <p class="kicker">Aisle {c.code}</p>

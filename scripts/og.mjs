@@ -2,6 +2,7 @@
 import { readdirSync, readFileSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { Resvg } from '@resvg/resvg-js';
 import { parse } from 'yaml';
+import { site } from '../src/site.config.ts';
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 function wrap(text, max) {
@@ -35,6 +36,7 @@ function out(path, data) {
 }
 out('public/og/home.png', { code: 'GAMEDEALWAVE · PRICE-TAG WALL', title: 'Check the tag before you take it to the register', sub: 'gamedealwave.online · buying checklists, no prices' });
 let n = 1;
+for (const c of site.categories) { out(`public/og/category/${c.slug}.png`, { code: `AISLE ${c.code} · ${c.name.toUpperCase()}`, title: c.seoTitle.split(':')[0], sub: 'gamedealwave.online · checklists, no prices' }); n++; }
 const dir = 'src/content/guides';
 if (existsSync(dir)) for (const f of readdirSync(dir)) {
   if (!f.endsWith('.md') || f.startsWith('_')) continue;
