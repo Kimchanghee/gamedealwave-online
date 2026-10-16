@@ -1,0 +1,10 @@
+# BEFORE evidence for gamedealwave.online, captured 2026-10-16T09:12:25+09:00 with curl (no JS)
+GET https://gamedealwave.online/ -> 402 text/plain; charset=utf-8 server=Vercel
+GET https://gamedealwave.online/robots.txt -> 402 text/plain; charset=utf-8 server=Vercel
+GET https://gamedealwave.online/sitemap.xml -> 402 text/plain; charset=utf-8 server=Vercel
+GET https://gamedealwave.online/sitemap-index.xml -> 402 text/plain; charset=utf-8 server=Vercel
+GET https://gamedealwave.online/llms.txt -> 402 text/plain; charset=utf-8 server=Vercel
+GET https://gamedealwave.online/rss.xml -> 402 text/plain; charset=utf-8 server=Vercel
+GET https://gamedealwave.online/ads.txt -> 402 text/plain; charset=utf-8 server=Vercel
+GET https://gamedealwave.online/no-such-page-x -> 402 text/plain; charset=utf-8 server=Vercel
+body of / : Payment required  DEPLOYMENT_DISABLED  icn1::hwz6n-1792109546445-b169d5d36443
