@@ -10,4 +10,4 @@ Build note: `pnpm build` runs scripts/prebuild.mjs (clears Astro content-layer c
 - [x] M3 content: 8 guides DONE (ps5-m2-ssd, xbox-series-storage, switch-microsd, ps5-disc-vs-digital, game-editions, gift-card-region, gift-card-scam, controller-compatibility); docs DONE; content/backlog.md (18 questions) and ops/POSTING-RULES.md (+ post template) DONE
 - [x] M4 SEO: seo/before-curl.txt (402 DEPLOYMENT_DISABLED), seo/after-curl.txt (scripts/crawler-check.ps1), seo/scorecard.md, seo/measure.md, DESIGN_REFERENCES.md
 - [x] M5 QA: astro check 0 errors (typescript pinned ^5.9; TS 7 breaks astro check), pnpm test 6/6, gate PASS 24 pages, gate:examples OK, qa:staged dry run OK tag OFF+ON, screenshots qa/screens (home, guide, category, 404, about, staged pick) at 1440/390: no overflow, CLS <= 0.02, focus 3px visible, 0 small targets. Fixed: invisible receipt (mask), sparse home wall, mobile nav 3 rows
-- [ ] M6 final push + report
+- [x] M6 final verification 2026-10-16 10:00 KST: pnpm build 24 pages, gate PASS (0 posts, affiliate OFF), tree clean, pushed. Publish: `pwsh -File scripts/publish.ps1 -Slug <slug>` (dry: `-DryRun`)
