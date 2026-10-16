@@ -1,0 +1,190 @@
+{
+  "asOf": "2026-10-16T00:06:04.333Z",
+  "source": "HTTP reachability of cited official sources",
+  "sourceUrl": "https://gamedealwave.online/methodology/",
+  "results": [
+    {
+      "url": "https://www.playstation.com/en-us/support/games/ps5-backward-compatibility-games/",
+      "usedBy": [
+        "controller-compatibility-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.playstation.com/en-us/support/games/ps5-backward-compatibility-games/",
+      "checkedAt": "2026-10-16T00:05:41.869Z"
+    },
+    {
+      "url": "https://www.playstation.com/en-us/support/hardware/accessories/",
+      "usedBy": [
+        "controller-compatibility-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.playstation.com/en-us/support/hardware/accessories/",
+      "checkedAt": "2026-10-16T00:05:42.742Z"
+    },
+    {
+      "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68426",
+      "usedBy": [
+        "controller-compatibility-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68426",
+      "checkedAt": "2026-10-16T00:05:44.969Z"
+    },
+    {
+      "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68415",
+      "usedBy": [
+        "game-editions-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68415",
+      "checkedAt": "2026-10-16T00:05:47.128Z"
+    },
+    {
+      "url": "https://www.playstation.com/en-us/support/games/upgrade-ps4-game-to-ps5-version/",
+      "usedBy": [
+        "game-editions-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.playstation.com/en-us/support/games/upgrade-ps4-game-to-ps5-version/",
+      "checkedAt": "2026-10-16T00:05:48.464Z"
+    },
+    {
+      "url": "https://support.xbox.com/en-US/help/subscriptions-billing/redeem-codes-gifting/redeem-prepaid-codes",
+      "usedBy": [
+        "game-editions-checklist",
+        "gift-card-region-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://support.xbox.com/en-US/help/subscriptions-billing/redeem-codes-gifting/redeem-prepaid-codes",
+      "checkedAt": "2026-10-16T00:05:49.397Z"
+    },
+    {
+      "url": "https://support.xbox.com/en-US/help/subscriptions-billing/redeem-codes-gifting/digital-code-solution",
+      "usedBy": [
+        "gift-card-region-checklist",
+        "gift-card-scam-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://support.xbox.com/en-US/help/subscriptions-billing/redeem-codes-gifting/digital-code-solution",
+      "checkedAt": "2026-10-16T00:05:50.344Z"
+    },
+    {
+      "url": "https://store.playstation.com/en-us/pages/redeem-code",
+      "usedBy": [
+        "gift-card-region-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://store.playstation.com/en-us/pages/redeem-code",
+      "checkedAt": "2026-10-16T00:05:50.969Z"
+    },
+    {
+      "url": "https://consumer.ftc.gov/articles/avoiding-and-reporting-gift-card-scams",
+      "usedBy": [
+        "gift-card-region-checklist",
+        "gift-card-scam-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://consumer.ftc.gov/articles/avoiding-and-reporting-gift-card-scams",
+      "checkedAt": "2026-10-16T00:05:52.119Z"
+    },
+    {
+      "url": "https://reportfraud.ftc.gov/",
+      "usedBy": [
+        "gift-card-scam-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://reportfraud.ftc.gov/",
+      "checkedAt": "2026-10-16T00:05:52.479Z"
+    },
+    {
+      "url": "https://www.playstation.com/en-us/ps5/",
+      "usedBy": [
+        "ps5-disc-vs-digital-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.playstation.com/en-us/ps5/",
+      "checkedAt": "2026-10-16T00:05:53.043Z"
+    },
+    {
+      "url": "https://direct.playstation.com/en-us/buy-accessories/disc-drive-for-ps5-digital-edition-consoles",
+      "usedBy": [
+        "ps5-disc-vs-digital-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://direct.playstation.com/en-us/buy-accessories/disc-drive-for-ps5-digital-edition-consoles",
+      "checkedAt": "2026-10-16T00:05:53.838Z"
+    },
+    {
+      "url": "https://www.playstation.com/en-us/support/games/",
+      "usedBy": [
+        "ps5-disc-vs-digital-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.playstation.com/en-us/support/games/",
+      "checkedAt": "2026-10-16T00:05:54.447Z"
+    },
+    {
+      "url": "https://www.playstation.com/en-us/support/hardware/ps5-install-m2-ssd/",
+      "usedBy": [
+        "ps5-m2-ssd-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.playstation.com/en-us/support/hardware/ps5-install-m2-ssd/",
+      "checkedAt": "2026-10-16T00:05:55.294Z"
+    },
+    {
+      "url": "https://www.playstation.com/en-us/support/hardware/ps5-extended-storage/",
+      "usedBy": [
+        "ps5-m2-ssd-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.playstation.com/en-us/support/hardware/ps5-extended-storage/",
+      "checkedAt": "2026-10-16T00:05:56.162Z"
+    },
+    {
+      "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/22481",
+      "usedBy": [
+        "switch-microsd-card-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/22481",
+      "checkedAt": "2026-10-16T00:05:58.118Z"
+    },
+    {
+      "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68425",
+      "usedBy": [
+        "switch-microsd-card-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68425",
+      "checkedAt": "2026-10-16T00:06:00.273Z"
+    },
+    {
+      "url": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68218",
+      "usedBy": [
+        "switch-microsd-card-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68218",
+      "checkedAt": "2026-10-16T00:06:02.028Z"
+    },
+    {
+      "url": "https://support.xbox.com/en-US/help/hardware-network/console/storage-xbox-series-x-s",
+      "usedBy": [
+        "xbox-series-storage-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://support.xbox.com/en-US/help/hardware-network/console/storage-xbox-series-x-s",
+      "checkedAt": "2026-10-16T00:06:03.128Z"
+    },
+    {
+      "url": "https://support.xbox.com/en-US/help/hardware-network/console/manage-storage",
+      "usedBy": [
+        "xbox-series-storage-checklist"
+      ],
+      "status": 200,
+      "finalUrl": "https://support.xbox.com/en-US/help/hardware-network/console/manage-storage",
+      "checkedAt": "2026-10-16T00:06:04.029Z"
+    }
+  ]
+}

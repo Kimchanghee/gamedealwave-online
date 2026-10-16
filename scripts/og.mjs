@@ -42,4 +42,11 @@ if (existsSync(dir)) for (const f of readdirSync(dir)) {
   out(`public/og/guides/${fm.slug}.png`, { code: `${String(fm.category).toUpperCase()} · CHECKLIST`, title: fm.title, sub: `gamedealwave.online · facts checked ${fm.data_asof}` });
   n++;
 }
+const pdir = 'src/content/posts';
+if (existsSync(pdir)) for (const f of readdirSync(pdir)) {
+  if (!f.endsWith('.md') || f.startsWith('_')) continue;
+  const fm = parse(readFileSync(`${pdir}/${f}`, 'utf8').split(/^---\s*$/m)[1]);
+  out(`public/og/picks/${fm.slug}.png`, { code: `${String(fm.category).toUpperCase()} · PICK`, title: fm.title, sub: `gamedealwave.online · link checked ${String(fm.product?.verifiedAt ?? '').slice(0, 10)}` });
+  n++;
+}
 console.log(`og: wrote ${n} images`);

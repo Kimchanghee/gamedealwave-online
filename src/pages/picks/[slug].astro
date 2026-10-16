@@ -22,7 +22,7 @@ const crumbs = [{ name: 'Home', path: '/' }, { name: 'Picks', path: '/picks/' },
 const nodes: object[] = [organization(), breadcrumb(crumbs), article({ headline: d.title, description: d.description, path, published: d.published, modified: d.updated, image: cover.src })];
 if (d.faq.length) nodes.push(faqPage(d.faq));
 ---
-<Base title={d.seoTitle ?? d.title} description={d.description} path={path} ld={graph(...nodes)} ogImage={cover.src} ogType="article">
+<Base title={d.seoTitle ?? d.title} description={d.description} path={path} ld={graph(...nodes)} ogImage={`/og/picks/${d.slug}.png`} ogType="article">
   <div class="wrap">
     <Crumbs items={crumbs} />
     <div class="article">

@@ -1,6 +1,9 @@
 // Single source of site identity + monetization wiring. Erasable TS only (also imported by Node scripts).
-const env: Record<string, string | undefined> =
-  ((import.meta as any).env as Record<string, string | undefined>) ?? (globalThis as any).process?.env ?? {};
+// Merge both: astro.config (rehype link rewriting) sees process.env but an import.meta.env without PUBLIC_* values.
+const env: Record<string, string | undefined> = {
+  ...((globalThis as any).process?.env ?? {}),
+  ...(((import.meta as any).env as Record<string, string | undefined>) ?? {}),
+};
 
 export const site = {
   domain: 'gamedealwave.online',

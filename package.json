@@ -7,11 +7,13 @@
     "dev": "astro dev",
     "refresh": "node scripts/refresh.mjs",
     "og": "node scripts/og.mjs",
-    "build": "node scripts/og.mjs && astro build",
+    "build": "node scripts/prebuild.mjs && astro build",
     "preview": "astro preview --port 4331",
     "check": "astro check",
     "gate": "node scripts/gate.mjs",
     "gate:examples": "node scripts/gate-examples.mjs",
+    "publish:dry": "pwsh -File scripts/publish.ps1 -DryRun -Slug",
+    "qa:staged": "pwsh -File scripts/qa-staged.ps1",
     "test": "node --test tests/"
   },
   "dependencies": {
