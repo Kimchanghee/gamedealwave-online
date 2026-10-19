@@ -1,3 +1,5 @@
+import affiliatesConfig from './data/affiliates.json' with { type: 'json' };
+import { AMAZON_STATEMENT, isActive, providerForHost as hostToProvider, amazonTagValue, hrefFor, disclosureText, type Programs } from './lib/affiliate-core.ts';
 // Single source of site identity + monetization wiring. Erasable TS only (also imported by Node scripts).
 // Merge both: astro.config (rehype link rewriting) sees process.env but an import.meta.env without PUBLIC_* values.
 const env: Record<string, string | undefined> = {
@@ -25,7 +27,7 @@ export const site = {
   affiliate: { amazonStoreUrl: '' },
   indexNowKey: 'ca4c78e1dd12f2678364a05ecfa37e33',
   siteUpdated: '2026-10-15',
-  providerAllowlist: { amazon: ['www.amazon.com', 'amazon.com', 'amzn.to'] } as Record<string, string[]>,
+  providerAllowlist: Object.fromEntries(Object.entries((affiliatesConfig as any).programs).map(([k, p]: [string, any]) => [k, [...p.hosts, ...(p.trackingHosts ?? [])]])) as Record<string, string[]>,
   categories: [
     { slug: 'consoles', name: 'Consoles', code: 'CON', seoTitle: 'Console Buying Checklists: Models, Bundles and Region Checks',
       blurb: "Checklists for buying a PlayStation, Xbox or Nintendo console: model numbers, disc versus digital editions, bundle contents, and what to confirm at checkout." },
@@ -40,29 +42,35 @@ export const site = {
   ],
 };
 
-export const AMAZON_STATEMENT = 'As an Amazon Associate I earn from qualifying purchases.';
+export { AMAZON_STATEMENT };
 export const NO_TAG_STATEMENT =
   'Product links go to Amazon product pages without an affiliate tag. We earn nothing from them today; if that changes, this notice changes first.';
 
+export const PROGRAMS = (affiliatesConfig as any).programs as Programs;
+const GENERIC_RETAILER = 'This post contains links to a retailer. We may earn a commission if that link is an affiliate link.';
+
+export function programActive(provider: string): boolean {
+  return isActive(PROGRAMS, provider);
+}
+export function amazonTag(): string {
+  return amazonTagValue(PROGRAMS, site.amazonTag);
+}
 export function isAffiliateMode(): boolean {
-  return site.amazonTag.trim().length > 0;
+  return amazonTag().length > 0;
+}
+export function providerForHost(host: string): string | null {
+  return hostToProvider(PROGRAMS, host);
 }
 
 export function disclosureFor(provider: string): string {
-  if (provider === 'amazon') return isAffiliateMode() ? AMAZON_STATEMENT : NO_TAG_STATEMENT;
-  return 'This post contains links to a retailer. We may earn a commission if that link is an affiliate link.';
+  return disclosureText(PROGRAMS, provider, { envTag: site.amazonTag, amazonOff: NO_TAG_STATEMENT, generic: GENERIC_RETAILER });
 }
 
-// Always the full set: harmless on untagged links, mandatory once the Associates tag is on (commerce gate checks it).
+// Always the full set: harmless on untagged links, mandatory once a program is on (commerce gate checks it).
 export function productRel(): string {
   return 'sponsored nofollow noopener';
 }
 
-export function productHref(raw: string): string {
-  const u = new URL(raw);
-  const amazon = site.providerAllowlist.amazon;
-  if (isAffiliateMode() && amazon.includes(u.hostname) && u.hostname !== 'amzn.to') {
-    u.searchParams.set('tag', site.amazonTag.trim());
-  }
-  return u.toString();
+export function productHref(raw: string, provider?: string): string {
+  return hrefFor(PROGRAMS, raw, provider, site.amazonTag);
 }

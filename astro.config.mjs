@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { parse } from 'yaml';
-import { site, productHref, productRel } from './src/site.config.ts';
+import { site, productHref, productRel, providerForHost, programActive } from './src/site.config.ts';
 
 // lastmod map from real content dates (frontmatter `updated`), never build time.
 function contentDates() {
@@ -24,12 +24,14 @@ const latest = [...dates.values(), site.siteUpdated].sort().at(-1);
 // Rewrites Amazon product links in markdown bodies so in-text href == card href == CTA href.
 function rehypeProductLinks() {
   const hosts = site.providerAllowlist.amazon;
+  let inPost = false;
   const walk = (node) => {
     if (node.type === 'element' && node.tagName === 'a' && node.properties?.href) {
       try {
         const u = new URL(String(node.properties.href));
-        if (hosts.includes(u.hostname)) {
-          node.properties.href = productHref(u.toString());
+        const prov = providerForHost(u.hostname);
+        if (hosts.includes(u.hostname) || (inPost && prov && prov !== 'amazon' && programActive(prov))) {
+          node.properties.href = productHref(u.toString(), prov ?? undefined);
           node.properties.rel = productRel().split(' ');
           node.properties.className = ['product-link'];
           node.properties['data-outbound'] = u.hostname;
@@ -38,7 +40,7 @@ function rehypeProductLinks() {
     }
     for (const c of node.children ?? []) walk(c);
   };
-  return (tree) => walk(tree);
+  return (tree, file) => { inPost = /[\\/]content[\\/]posts[\\/]/.test(String(file?.path ?? '')); walk(tree); };
 }
 
 export default defineConfig({

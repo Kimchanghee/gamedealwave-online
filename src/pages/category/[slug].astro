@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 const { c } = Astro.props;
 const guides = (await getCollection('guides')).filter((g) => g.data.category === c.slug);
 const posts = (await getCollection('posts')).filter((p) => p.data.category === c.slug);
-const ordered = [...guides].sort((a, b) => +b.data.updated - +a.data.updated);
+const ordered = [...guides].sort((a, b) => +b.data.updated - +a.data.updated || a.data.slug.localeCompare(b.data.slug));
 const updated = ordered.length ? ordered[0].data.updated.toISOString().slice(0, 10) : null;
 const lead = ordered[0];
 const crumbs = [{ name: 'Home', path: '/' }, { name: c.name, path: `/category/${c.slug}/` }];

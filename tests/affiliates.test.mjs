@@ -19,7 +19,7 @@ function fixture(mut, post) {
   if (post) writeFileSync(join(d, 'src/content/posts/x.md'), post);
   return d;
 }
-const enable = (c) => { c.programs[first].enabled = true; c.programs[first].id = 'real-id-1'; };
+const enable = (c) => { c.programs[first].enabled = true; c.programs[first].id = 'real-id-1'; c.programs[first].trackingHosts = ['track.example']; };
 const post = (url, extra = '') => `---\ncategory: x\nproduct:\n  provider: ${first}\n  url: "${url}"\n---\n${extra}\n`;
 
 test('shipped config keeps every program disabled with no id', () => {

@@ -4,7 +4,7 @@
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { parse } from 'node-html-parser';
-import { site, productHref, isAffiliateMode, AMAZON_STATEMENT } from '../src/site.config.ts';
+import { site, productHref, isAffiliateMode, AMAZON_STATEMENT, amazonTag, programActive, providerForHost, PROGRAMS } from '../src/site.config.ts';
 import { checkAffiliates } from './affiliate-check.mjs';
 import { checkPostSource, splitMd, readLog, PLACEHOLDER, words } from './gate-lib.mjs';
 
@@ -102,10 +102,20 @@ for (const file of pages) {
     for (const a of links) if (a.getAttribute('rel') !== 'sponsored nofollow noopener') fail(where, `rel="${a.getAttribute('rel')}" on product link`);
     const href = [...hrefs][0] ?? '';
     if (isAffiliateMode()) {
-      if (!href.includes(`tag=${site.amazonTag}`)) fail(where, 'affiliate mode on but product link has no tag');
+      if (!href.includes(`tag=${amazonTag()}`)) fail(where, 'affiliate mode on but product link has no tag');
       if (!doc.querySelector('footer')?.text.includes(AMAZON_STATEMENT)) fail(where, 'Amazon statement missing in footer');
       if (!(art?.text ?? '').includes(AMAZON_STATEMENT)) fail(where, 'Amazon statement missing near links');
-    } else if (/[?&]tag=/.test(href)) fail(where, 'tag present while amazonTag is empty');
+    } else if (/[?&]tag=/.test(href) && providerForHost(new URL(href).hostname) === 'amazon') fail(where, 'tag present while amazonTag is empty');
+    let prov = null; try { prov = providerForHost(new URL(href).hostname); } catch {}
+    if (prov && prov !== 'amazon') {
+      if (!programActive(prov)) fail(where, `${prov} program inactive but a product link is published`);
+      else {
+        const f = PROGRAMS[prov].linkFormat;
+        if (f?.type === 'query' && new URL(href).searchParams.get(f.param) !== PROGRAMS[prov].id.trim()) fail(where, `${prov} link lacks ${f.param}`);
+        if (!(art?.text ?? '').includes(PROGRAMS[prov].disclosure)) fail(where, `${prov} disclosure missing near links`);
+      }
+      if ((art?.text ?? '').includes(AMAZON_STATEMENT)) fail(where, 'Amazon statement on a non-Amazon page');
+    }
     for (const img of art?.querySelectorAll('img') ?? []) {
       const src = img.getAttribute('src') ?? '';
       if (!img.getAttribute('alt')) fail(where, `img without alt ${src}`);
@@ -128,7 +138,7 @@ for (const p of posts) {
   if (!existsSync(join(DIST, 'picks', String(p.fm.slug), 'index.html'))) fail(`post ${p.f}`, 'not built');
   else {
     const built = readFileSync(join(DIST, 'picks', String(p.fm.slug), 'index.html'), 'utf8');
-    if (!built.includes(productHref(p.fm.product.url).replace(/&/g, '&amp;'))) fail(`post ${p.f}`, 'built page lacks exact product href');
+    if (!built.includes(productHref(p.fm.product.url, p.fm.product.provider).replace(/&/g, '&amp;'))) fail(`post ${p.f}`, 'built page lacks exact product href');
   }
 }
 if (onlySlug && !posts.some((p) => p.fm.slug === onlySlug)) fail('gate', `no post with slug ${onlySlug}`);

@@ -2,7 +2,10 @@
 import { productHref, productRel, disclosureFor, isAffiliateMode } from '../site.config.ts';
 interface Props { product: { name: string; optionDetail: string; provider: string; url: string; landingHost: string; verifiedAt: string }; variant: 'rail' | 'inline' | 'end' }
 const { product, variant } = Astro.props;
-const href = productHref(product.url);
+const href = productHref(product.url, product.provider);
+const fineText = product.provider === 'amazon'
+  ? `${isAffiliateMode() ? 'As an Amazon Associate I earn from qualifying purchases.' : 'Plain Amazon link, no affiliate tag.'} Price and stock are shown only on Amazon.`
+  : `${disclosureFor(product.provider)} Price and stock are shown only on ${product.landingHost}.`;
 const host = new URL(product.url).hostname;
 const label = product.provider === 'amazon' ? 'View this item on Amazon' : `View on ${product.landingHost}`;
 ---
@@ -19,6 +22,6 @@ const label = product.provider === 'amazon' ? 'View this item on Amazon' : `View
     <p class="ptag__opt"><span>Option</span> {product.optionDetail}</p>
     <p class="ptag__opt"><span>Link checked</span> {product.verifiedAt.slice(0, 10)}</p>
     <a class="btn-checkout" href={href} rel={productRel()} data-outbound={host} data-cta={variant}>{label}</a>
-    <p class="ptag__fine">{isAffiliateMode() ? 'As an Amazon Associate I earn from qualifying purchases.' : 'Plain Amazon link, no affiliate tag.'} Price and stock are shown only on Amazon.</p>
+    <p class="ptag__fine">{fineText}</p>
   </aside>
 )}

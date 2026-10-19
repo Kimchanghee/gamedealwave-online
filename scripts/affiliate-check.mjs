@@ -10,6 +10,9 @@ export function checkAffiliates(root = process.cwd()) {
     if (p.enabled && !/^[A-Za-z0-9._-]{3,}$/.test(p.id ?? '')) e.push(`program ${k} enabled without a real id`);
     if (p.enabled && !(p.disclosure ?? '').trim()) e.push(`program ${k} enabled without disclosure`);
     if (!Array.isArray(p.hosts) || !p.hosts.length) e.push(`program ${k} has no host allowlist`);
+    if (!['query', 'issued'].includes(p.linkFormat?.type)) e.push(`program ${k} has no documented linkFormat`);
+    if (p.linkFormat?.type === 'query' && !p.linkFormat.param) e.push(`program ${k} query format without param`);
+    if (p.enabled && p.linkFormat?.type === 'issued' && !(p.trackingHosts ?? []).length) e.push(`program ${k} uses issued links but lists no trackingHosts`);
   }
   const dir = join(root, 'src/content/posts');
   if (existsSync(dir)) {
@@ -23,7 +26,7 @@ export function checkAffiliates(root = process.cwd()) {
       const p = cfg.programs[prov];
       if (!p) { e.push(`${f}: provider ${prov} not in affiliates.json`); continue; }
       if (!p.enabled) e.push(`${f}: provider ${prov} is disabled; product posts need an enabled program`);
-      try { if (url && !p.hosts.includes(new URL(url).hostname)) e.push(`${f}: product host not allowlisted for ${prov}`); } catch { e.push(`${f}: invalid product url`); }
+      try { if (url && ![...p.hosts, ...(p.trackingHosts ?? [])].includes(new URL(url).hostname)) e.push(`${f}: product host not allowlisted for ${prov}`); } catch { e.push(`${f}: invalid product url`); }
     }
   }
   return e;
