@@ -95,3 +95,17 @@ faq:
 ```
 A complete marked example lives at `src/content/posts/_examples/pass-example.md`; `pnpm gate:examples`
 proves the gate accepts it and rejects `fail-example.md`.
+
+
+## Addendum 2026-10-19: product posts on partner programs
+
+- Partner programs live in `src/data/affiliates.json`. A post may use a program only when `enabled: true` and `id` holds the real issued ID. Never invent an ID or tag.
+- Exact product: name the precise model and variant (model number, colour, size, switch type, capacity) exactly as the manufacturer lists it. The product URL must open that exact variant.
+- Specs come only from the official manufacturer page. Record the URL and the time it was read. If two official sources disagree, leave the value out.
+- No prices, stock, discounts, star ratings or "deal" claims in the text.
+- No fake reviews, no invented hands-on use, no "we tested". Write it as a buying checklist, not a review.
+- The disclosure sits at the top of every page with an active partner link. Amazon pages use exactly: "As an Amazon Associate I earn from qualifying purchases." Other programs use the generic disclosure in affiliates.json.
+- Links carry `rel="sponsored nofollow noopener"`.
+- Gift-card, scam and account-safety guides never carry partner links.
+- Gray-market key resellers stay disabled unless the owner decides otherwise and the risk is disclosed.
+- Queue manuscripts sit in `ops/queue/` with `AFFILIATE_URL_PENDING`. The gate refuses to publish any post that still contains it.

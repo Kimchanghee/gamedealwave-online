@@ -43,7 +43,7 @@ const posts = defineCollection({
     product: z.object({
       name: z.string(),
       optionDetail: z.string(),
-      provider: z.enum(['coupang', 'ohou', 'toss', 'naver', 'amazon']),
+      provider: z.enum(['coupang', 'ohou', 'toss', 'naver', 'amazon', 'fanatical', 'greenmangaming']),
       url: z.string().url(),
       landingHost: z.string(),
       verifiedAt: z.string(),

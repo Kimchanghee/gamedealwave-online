@@ -14,7 +14,7 @@
     "gate:examples": "node scripts/gate-examples.mjs",
     "publish:dry": "pwsh -File scripts/publish.ps1 -DryRun -Slug",
     "qa:staged": "pwsh -File scripts/qa-staged.ps1",
-    "test": "node --test tests/gate.test.mjs"
+    "test": "node --test tests/gate.test.mjs tests/affiliates.test.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

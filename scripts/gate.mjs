@@ -5,6 +5,7 @@ import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { parse } from 'node-html-parser';
 import { site, productHref, isAffiliateMode, AMAZON_STATEMENT } from '../src/site.config.ts';
+import { checkAffiliates } from './affiliate-check.mjs';
 import { checkPostSource, splitMd, readLog, PLACEHOLDER, words } from './gate-lib.mjs';
 
 const ROOT = process.cwd();
@@ -21,7 +22,7 @@ function walk(dir, out = []) {
 const sitemapXml = readdirSync(DIST).filter((f) => /^sitemap-\d+\.xml$/.test(f)).map((f) => readFileSync(join(DIST, f), 'utf8')).join('');
 const sitemapLocs = new Set([...sitemapXml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]));
 if (!sitemapLocs.size) fail('sitemap', 'no sitemap locs found');
-for (const f of ['robots.txt', 'ads.txt', 'llms.txt', 'rss.xml', 'sitemap-index.xml', `${site.indexNowKey}.txt`]) if (!existsSync(join(DIST, f))) fail('site', `missing /${f}`);
+for (const f of ['robots.txt', 'ads.txt', 'llms.txt', 'llms-full.txt', 'rss.xml', 'sitemap-index.xml', `${site.indexNowKey}.txt`]) if (!existsSync(join(DIST, f))) fail('site', `missing /${f}`);
 if (existsSync(join(DIST, 'ads.txt')) && !readFileSync(join(DIST, 'ads.txt'), 'utf8').includes('pub-4490818204529253')) fail('ads.txt', 'wrong publisher');
 
 // Ads gate: AdSense loader must be absent unless PUBLIC_ADS_ENABLED=true; verification meta and ads.txt stay regardless.
@@ -37,6 +38,7 @@ if (existsSync(join(DIST, 'ads.txt')) && !readFileSync(join(DIST, 'ads.txt'), 'u
 }
 if (existsSync(join(DIST, 'robots.txt')) && /Disallow:\s*\/\s*$/m.test(readFileSync(join(DIST, 'robots.txt'), 'utf8'))) fail('robots.txt', 'blocks crawling');
 
+for (const m of checkAffiliates(ROOT)) fail('affiliates', m);
 const pages = walk(DIST);
 let checked = 0;
 for (const file of pages) {
