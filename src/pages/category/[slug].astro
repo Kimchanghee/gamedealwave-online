@@ -20,8 +20,8 @@ const crumbs = [{ name: 'Home', path: '/' }, { name: c.name, path: `/category/${
     <Crumbs items={crumbs} />
     <p class="kicker">Aisle {c.code}</p>
     <h1>{c.name}</h1>
-    <p>{c.blurb}</p>
     {lead && <p class="cat-answer"><strong>Short answer:</strong> {lead.data.answer} <a href={`/guides/${lead.data.slug}/`}>Read the checklist</a>.</p>}
+    <p>{c.blurb}</p>
     {updated && <p class="cat-updated">Updated <time datetime={updated}>{updated}</time></p>}
     <h2>Checklists in this aisle</h2>
     {guides.length ? <ul class="ledger">{guides.map((g) => <li><a href={`/guides/${g.data.slug}/`}><span class="ledger__c">{c.code}</span><span><span class="ledger__t">{g.data.title}</span><span class="ledger__q">{g.data.question}</span></span></a></li>)}</ul> : <p class="empty">No checklists here yet.</p>}

@@ -30,8 +30,8 @@ if (d.faq.length) nodes.push(faqPage(d.faq));
         <p class="disclose" data-disclosure>{d.disclosure ?? disclosureFor(d.product.provider)}</p>
         <p class="kicker">{cat.code} · Product pick</p>
         <h1>{d.title}</h1>
-        <p class="byline">Published <time datetime={d.published}>{d.published.slice(0, 10)}</time> · updated {d.updated.slice(0, 10)} · link checked {d.product.verifiedAt.slice(0, 10)}</p>
         <p class="answer" data-answer><strong>Short answer:</strong> {d.answer}</p>
+        <div class="byline">Published <time datetime={d.published}>{d.published.slice(0, 10)}</time> · updated {d.updated.slice(0, 10)} · link checked {d.product.verifiedAt.slice(0, 10)}</div>
         <ProductCard product={d.product} variant="inline" />
         <figure class="pick-figure"><img src={cover.src} alt={cover.alt} width="1080" height="1350" loading="eager" /><figcaption class="byline">{cover.credit}</figcaption></figure>
         <Content />

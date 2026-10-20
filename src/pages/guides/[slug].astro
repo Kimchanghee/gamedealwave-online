@@ -29,8 +29,8 @@ if (d.faq.length) nodes.push(faqPage(d.faq));
       <article class="sheet prose">
         <p class="kicker">{cat.code} · Buying checklist</p>
         <h1>{d.title}</h1>
-        <p class="byline">Updated <time datetime={isoDate(d.updated)}>{isoDate(d.updated)}</time> · facts checked {d.data_asof} · by the {site.name} desk</p>
         <p class="answer" data-answer><strong>Short answer:</strong> {d.answer}</p>
+        <div class="byline">Updated <time datetime={isoDate(d.updated)}>{isoDate(d.updated)}</time> · facts checked {d.data_asof} · by the {site.name} desk</div>
         <Receipt title={`Checkout slip: ${d.question}`} items={d.checklist} />
         <Content />
         <Faq faq={d.faq} />

@@ -5,7 +5,7 @@ export async function GET() {
   const guides = await getCollection('guides');
   const posts = await getCollection('posts');
   const lines = [
-    `# ${site.name}`, '', `> ${site.description}`, '',
+    `# ${site.name}`, '', `> ${site.description}`, '', 'Last updated: 2026-10-20', '',
     `Link policy: ${isAffiliateMode() ? AMAZON_STATEMENT : NO_TAG_STATEMENT} We never show Amazon prices, stock or star ratings.`, '',
     '## Buying checklists',
     ...guides.map((g) => `- [${g.data.title}](${site.url}/guides/${g.data.slug}/): ${g.data.answer}`), '',
