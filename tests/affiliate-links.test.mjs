@@ -9,14 +9,20 @@ const clone = () => structuredClone(shipped);
 const opts = { amazonOff: 'AMAZON-OFF', generic: 'GENERIC' };
 const other = Object.keys(shipped).find((k) => k !== 'amazon');
 
-test('all shipped programs inactive: links unchanged, no Amazon line', () => {
+test('shipped config: Amazon active with tag, every other program inactive', () => {
   for (const k of Object.keys(shipped)) {
-    assert.equal(isActive(shipped, k), false);
     const url = `https://${shipped[k].hosts[0]}/dp/B000000000?x=1`;
+    if (k === 'amazon') {
+      assert.equal(isActive(shipped, k), true);
+      assert.equal(new URL(hrefFor(shipped, url, k)).searchParams.get('tag'), 'gamebeatonlin-20');
+      assert.equal(disclosureText(shipped, k, opts), AMAZON_STATEMENT);
+      continue;
+    }
+    assert.equal(isActive(shipped, k), false);
     assert.equal(hrefFor(shipped, url, k), new URL(url).toString());
     assert.notEqual(disclosureText(shipped, k, opts), AMAZON_STATEMENT);
   }
-  assert.equal(cfgApi.isAffiliateMode(), false);
+  assert.equal(cfgApi.isAffiliateMode(), true);
 });
 
 test('Amazon enabled: tag appended in ?tag= format, Amazon line used', () => {

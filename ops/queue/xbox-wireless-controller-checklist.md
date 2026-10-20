@@ -1,6 +1,6 @@
 ---
 title: "Xbox Wireless Controller: compatibility and battery checklist"
-seoTitle: "Xbox Wireless Controller Checklist: Devices, AA Batteries, Ports"
+seoTitle: "Xbox Wireless Controller Checklist: Devices, AA, Audio Jack"
 description: "A buying checklist for the Xbox Wireless Controller: which consoles, PCs and phones it supports, AA battery life, the headset jack and the expansion-port caveat"
 slug: xbox-wireless-controller-checklist
 question: "Will the Xbox Wireless Controller work with my devices?"
@@ -89,7 +89,7 @@ Xbox highlights a hybrid D-pad, textured grip on the triggers, bumpers and back 
 
 ## When a different controller makes more sense
 
-If you want back buttons and adjustable trigger stops, Xbox sells the Elite Wireless Controller Series 2. If you play mainly on PlayStation, you need a PlayStation controller instead. Our [controller compatibility checklist](/guides/controller-compatibility-checklist/) compares official and licensed controllers and explains wired versus wireless options.
+If you want back buttons and adjustable trigger stops, Xbox sells the Elite Wireless Controller Series 2. If you play mainly on PlayStation, you need a PlayStation controller instead. Our [controller compatibility checklist](/guides/controller-compatibility-checklist/) compares official and licensed controllers and explains wired versus wireless options. If you are also planning storage for the console itself, see our [Xbox Series storage checklist](/guides/xbox-series-storage-checklist/).
 
 We do not show prices or stock because they change frequently. Check them on the retailer page.
 

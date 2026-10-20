@@ -41,11 +41,10 @@ test('non-allowlisted host and non-product Amazon URLs fail', () => {
   assert.ok(a.some((e) => e.includes('not on amazon allowlist')));
 });
 
-test('with no Associates tag configured, links stay plain and disclosure says so', () => {
-  assert.equal(site.amazonTag, '');
-  assert.equal(productHref('https://www.amazon.com/dp/B0EXAMPLE0'), 'https://www.amazon.com/dp/B0EXAMPLE0');
-  assert.equal(disclosureFor('amazon'), NO_TAG_STATEMENT);
-  assert.notEqual(disclosureFor('amazon'), AMAZON_STATEMENT);
+test('with the issued Associates tag, links carry ?tag= and the Amazon statement is shown', () => {
+  assert.equal(new URL(productHref('https://www.amazon.com/dp/B0EXAMPLE0')).searchParams.get('tag'), 'gamebeatonlin-20');
+  assert.equal(disclosureFor('amazon'), AMAZON_STATEMENT);
+  assert.notEqual(disclosureFor('amazon'), NO_TAG_STATEMENT);
 });
 
 // Ads gate wiring: AdSense loader is behind site.adsEnabled, which defaults to false.

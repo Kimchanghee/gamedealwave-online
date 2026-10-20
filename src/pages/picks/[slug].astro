@@ -33,7 +33,7 @@ if (d.faq.length) nodes.push(faqPage(d.faq));
         <p class="byline">Published <time datetime={d.published}>{d.published.slice(0, 10)}</time> · updated {d.updated.slice(0, 10)} · link checked {d.product.verifiedAt.slice(0, 10)}</p>
         <p class="answer" data-answer><strong>Short answer:</strong> {d.answer}</p>
         <ProductCard product={d.product} variant="inline" />
-        <figure><img src={cover.src} alt={cover.alt} width="1200" height="675" loading="eager" /><figcaption class="byline">{cover.credit}</figcaption></figure>
+        <figure class="pick-figure"><img src={cover.src} alt={cover.alt} width="1080" height="1350" loading="eager" /><figcaption class="byline">{cover.credit}</figcaption></figure>
         <Content />
         <ProductCard product={d.product} variant="end" />
         <Faq faq={d.faq} />

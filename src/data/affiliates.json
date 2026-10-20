@@ -37,15 +37,15 @@
     },
     "amazon": {
       "name": "Amazon Associates (US)",
-      "enabled": false,
-      "id": "",
+      "enabled": true,
+      "id": "gamebeatonlin-20",
       "hosts": [
         "www.amazon.com",
         "amazon.com",
         "amzn.to"
       ],
       "disclosure": "As an Amazon Associate I earn from qualifying purchases.",
-      "status": "not_applied_or_unverified",
+      "status": "active (Associates Central StoreID gamebeatonlin-20; gamedealwave.online registered) observed 2026-10-20",
       "linkFormat": {
         "type": "query",
         "param": "tag"

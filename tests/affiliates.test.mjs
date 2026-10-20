@@ -5,7 +5,9 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { checkAffiliates } from '../scripts/affiliate-check.mjs';
 
-const real = JSON.parse(readFileSync(new URL('../src/data/affiliates.json', import.meta.url), 'utf8'));
+const shippedCfg = JSON.parse(readFileSync(new URL('../src/data/affiliates.json', import.meta.url), 'utf8'));
+const real = structuredClone(shippedCfg);
+for (const p of Object.values(real.programs)) { p.enabled = false; p.id = ''; }
 const first = Object.keys(real.programs)[0];
 const host = real.programs[first].hosts[0];
 
@@ -22,8 +24,11 @@ function fixture(mut, post) {
 const enable = (c) => { c.programs[first].enabled = true; c.programs[first].id = 'real-id-1'; c.programs[first].trackingHosts = ['track.example']; };
 const post = (url, extra = '') => `---\ncategory: x\nproduct:\n  provider: ${first}\n  url: "${url}"\n---\n${extra}\n`;
 
-test('shipped config keeps every program disabled with no id', () => {
-  for (const p of Object.values(real.programs)) { assert.equal(p.enabled, false); assert.equal(p.id, ''); }
+test('shipped config: only Amazon is enabled, with the issued Associates tag; others off', () => {
+  for (const [k, p] of Object.entries(shippedCfg.programs)) {
+    if (k === 'amazon') { assert.equal(p.enabled, true); assert.equal(p.id, 'gamebeatonlin-20'); }
+    else { assert.equal(p.enabled, false); assert.equal(p.id, ''); }
+  }
   assert.deepEqual(checkAffiliates(fixture()), []);
 });
 test('enabled program without an id fails', () => {

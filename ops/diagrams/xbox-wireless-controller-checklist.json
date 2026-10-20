@@ -1,0 +1,22 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "Xbox Wireless Controller · Carbon Black",
+      "title": "Where it works, and what to check on the listing",
+      "columns": [
+        {
+          "title": "Listed by Xbox",
+          "accent": true,
+          "items": ["Xbox Series X|S and Xbox One", "Windows 10/11, Android, iOS", "AA batteries: up to 40 hours", "3.5 mm headset jack"]
+        },
+        {
+          "title": "Check before buying",
+          "items": ["Colour shows Carbon Black", "Expansion port, if you need it", "Rechargeable kit is sold separately"]
+        }
+      ],
+      "foot": "Source: Xbox official product page, read 2026-10-19 · GameDealWave diagram"
+    }
+  ]
+}
