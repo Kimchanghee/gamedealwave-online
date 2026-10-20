@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T09:17:58.526Z",
+  "updated": "2026-10-20T16:58:39+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -14,21 +14,24 @@
       "factsObserved": "2026-10-19T18:05:00+09:00/2026-10-19T18:09:00+09:00",
       "linkPending": true,
       "programEnabled": false,
-      "published": false
+      "published": false,
+      "heldReason": "2026-10-20: no new US Sony DualSense Edge listing on amazon.com search (only Renewed B0FM9PZ2YJ/B0CJGK3B8Y and JP import B0BJTJNQFD). Not published; recheck later."
     },
     {
       "slug": "xbox-wireless-controller-checklist",
       "program": "amazon",
       "product": "Xbox Wireless Controller",
-      "variant": "colour and expansion-port version to confirm on listing",
+      "variant": "Carbon Black (verified on listing)",
       "source": "https://www.xbox.com/en-US/accessories/controllers/xbox-wireless-controller",
       "file": "ops/queue/xbox-wireless-controller-checklist.md",
       "image": "ops/queue/images/xbox-wireless-controller-checklist/cover.png",
       "imageRights": "own diagram (HTML render), facts from source page",
       "factsObserved": "2026-10-19T18:05:00+09:00/2026-10-19T18:09:00+09:00",
-      "linkPending": true,
-      "programEnabled": false,
-      "published": false
+      "linkPending": false,
+      "programEnabled": true,
+      "published": true,
+      "liveUrl": "https://gamedealwave.online/picks/xbox-wireless-controller-checklist/",
+      "asin": "B0F1HX3WXX"
     }
   ],
   "blocked": [
