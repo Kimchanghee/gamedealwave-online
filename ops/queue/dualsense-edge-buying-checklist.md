@@ -14,7 +14,7 @@ product:
   provider: amazon
   url: https://www.amazon.com/dp/B0BSYFB99D
   landingHost: www.amazon.com
-  verifiedAt: 2026-11-15T19:33:30+09:00
+  verifiedAt: "2026-11-15T19:33:30+09:00"
   evidence: ops/link-checks/dualsense-edge-buying-checklist.md
 images:
   - src: /images/picks/dualsense-edge-buying-checklist/cover.png
