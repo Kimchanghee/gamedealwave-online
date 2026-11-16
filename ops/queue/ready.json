@@ -34,6 +34,21 @@
       "published": true,
       "liveUrl": "https://gamedealwave.online/picks/xbox-wireless-controller-checklist/",
       "asin": "B0F1HX3WXX"
+    },
+    {
+      "slug": "ultimate-2c-bluetooth-switch-variant-check",
+      "program": "amazon",
+      "product": "8BitDo Ultimate 2C Bluetooth Controller for Switch/Switch 2, Blue",
+      "variant": "Color: Blue; Style: Ultimate 2C; Bluetooth model for Switch / Switch 2",
+      "asin": "B0DM1WH5BV",
+      "source": "https://www.8bitdo.com/ultimate-2c-bluetooth-controller",
+      "file": "ops/queue/ultimate-2c-bluetooth-switch-variant-check.md",
+      "image": "ops/queue/images/ultimate-2c-bluetooth-switch-variant-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-16T13:13:16+09:00/2026-11-16T13:13:16+09:00",
+      "published": false,
+      "dryRunPassedAt": "2026-11-16T04:22:27.074Z",
+      "dryRunReceipt": "rebuild-202610/_ops/game-publisher/runs/2026-11-16T04-22-27-074Z-dryrun.json"
     }
   ],
   "blocked": [

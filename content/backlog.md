@@ -43,3 +43,5 @@ Picks (hourly commerce posts) are written only from `ops/POSTING-RULES.md` and n
 - Two pages answering the same question: keep the stronger one, 301 the other to it and keep the canonical on the survivor. Use 410 only as a last resort.
 
 | dualsense-edge-buying-checklist | pick | queued | PlayStation DualSense Edge Wireless Controller; Amazon exact US variant verified 2026-11-15 |
+
+| ultimate-2c-bluetooth-switch-variant-check | pick | Ultimate 2C Bluetooth Switch variant | queued | 2026-11-16 13:00 KST; full rehearsal passed, 27 pages / 3 posts |
