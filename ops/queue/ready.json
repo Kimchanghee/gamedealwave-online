@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T10:07:12+09:00",
+  "updated": "2026-11-16T17:05:06+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -46,9 +46,13 @@
       "image": "ops/queue/images/ultimate-2c-bluetooth-switch-variant-check/cover.png",
       "imageRights": "own diagram",
       "factsObserved": "2026-11-16T13:13:16+09:00/2026-11-16T13:13:16+09:00",
-      "published": false,
+      "published": true,
       "dryRunPassedAt": "2026-11-16T04:22:27.074Z",
-      "dryRunReceipt": "rebuild-202610/_ops/game-publisher/runs/2026-11-16T04-22-27-074Z-dryrun.json"
+      "dryRunReceipt": "rebuild-202610/_ops/game-publisher/runs/2026-11-16T04-22-27-074Z-dryrun.json",
+      "publishedAt": "2026-11-16T17:05:06+09:00",
+      "liveUrl": "https://gamedealwave.online/picks/ultimate-2c-bluetooth-switch-variant-check/",
+      "linkPending": false,
+      "programEnabled": true
     }
   ],
   "blocked": [
