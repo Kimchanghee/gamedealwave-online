@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T10:34:52.259Z",
+  "updated": "2026-11-16T10:07:12+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -14,8 +14,10 @@
       "factsObserved": "2026-11-15T19:33:30+09:00/2026-11-15T19:33:30+09:00",
       "linkPending": false,
       "programEnabled": true,
-      "published": false,
-      "asin": "B0BSYFB99D"
+      "published": true,
+      "asin": "B0BSYFB99D",
+      "publishedAt": "2026-11-16T10:07:12+09:00",
+      "liveUrl": "https://gamedealwave.online/picks/dualsense-edge-buying-checklist/"
     },
     {
       "slug": "xbox-wireless-controller-checklist",
