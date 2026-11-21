@@ -1,3 +1,4 @@
+import { isApprovedAmazonEventLink } from '../src/lib/amazon-event-links.mjs';
 // pnpm gate — fails (exit 1) unless every built page passes the CONTRACT §4 publish gate
 // and every post passes the SHOPPING commerce gate. Run after `pnpm build`.
 // Usage: node scripts/gate.mjs [--slug <post-slug>]   (--slug limits the commerce gate to one post; page gate always runs)
@@ -95,7 +96,11 @@ for (const file of pages) {
     const art = main.querySelector('article');
     const first = art?.childNodes.find((n) => n.nodeType === 1);
     if (!first || first.getAttribute('data-disclosure') === undefined) fail(where, 'disclosure is not the first block of the post');
-    const links = doc.querySelectorAll('a[data-outbound], a.product-link');
+    const outboundLinks = doc.querySelectorAll('a[data-outbound], a.product-link');
+    const eventLinks = outboundLinks.filter((a) => isApprovedAmazonEventLink(a.getAttribute('href')));
+    if (eventLinks.length > 1) fail(where, 'at most one Amazon event hub is allowed');
+    for (const a of eventLinks) if (a.getAttribute('rel') !== 'sponsored nofollow noopener') fail(where, 'event hub disclosure rel is missing');
+    const links = outboundLinks.filter((a) => !isApprovedAmazonEventLink(a.getAttribute('href')));
     const hrefs = new Set(links.map((a) => a.getAttribute('href')));
     if (links.length < 3) fail(where, `expected rail/inline/end product links, found ${links.length}`);
     if (hrefs.size !== 1) fail(where, `product hrefs differ: ${[...hrefs].join(' | ')}`);

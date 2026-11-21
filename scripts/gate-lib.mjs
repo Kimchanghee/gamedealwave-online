@@ -1,3 +1,4 @@
+import { isApprovedAmazonEventLink } from '../src/lib/amazon-event-links.mjs';
 // Shared publish-gate logic: CONTRACT §4 page gate + SHOPPING commerce gate.
 // Source-level checks (frontmatter/body) are pure so gate-examples.mjs can prove pass/fail without a build.
 import { readFileSync, existsSync } from 'node:fs';
@@ -42,11 +43,12 @@ export function checkPostSource(fm, body, ctx) {
   if (p.landingHost && host && p.landingHost !== host && !(host === 'amzn.to' && allow.includes(p.landingHost))) e.push(`landingHost ${p.landingHost} != url host ${host}`);
   if (p.provider === 'amazon' && host && host !== 'amzn.to' && !/\/(?:dp|gp\/product)\/[A-Z0-9]{10}/.test(new URL(p.url).pathname)) e.push('amazon url must be an exact product page (/dp/ASIN)');
   if (p.evidence && ctx.rootDir && !existsSync(`${ctx.rootDir}/${p.evidence}`)) e.push(`product.evidence file not found: ${p.evidence}`);
-  // in-text product links must equal product.url (rehype then rewrites all of them identically)
+  // Exact product equality stays intact. One owner-approved event hub is separate.
   const mdLinks = [...body.matchAll(/\]\((https?:\/\/[^)\s]+)\)/g)].map((m) => m[1]);
   for (const l of mdLinks) {
-    try { const h = new URL(l).hostname; if (allow.includes(h) && l !== p.url) e.push(`in-text product link differs from product.url: ${l}`); } catch {}
+    try { const h = new URL(l).hostname; if (allow.includes(h) && l !== p.url && !(p.provider === 'amazon' && isApprovedAmazonEventLink(l))) e.push(`in-text product link differs from product.url: ${l}`); } catch {}
   }
+  if (mdLinks.filter(isApprovedAmazonEventLink).length > 1) e.push('at most one Amazon event hub is allowed');
   // images
   const imgs = fm.images ?? [];
   if (!imgs.some((i) => i.role === 'cover')) e.push('needs at least one cover image');
