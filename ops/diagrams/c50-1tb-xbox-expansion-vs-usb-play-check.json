@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / XBOX STORAGE",
+      "title": "Play space or archive?",
+      "columns": [
+        {
+          "title": "C50 expansion slot",
+          "accent": true,
+          "items": [
+            "Xbox Series X|S",
+            "Keep optimized games ready"
+          ]
+        },
+        {
+          "title": "USB archive",
+          "items": [
+            "Store optimized games",
+            "Move back before playing"
+          ]
+        }
+      ],
+      "foot": "Xbox and SanDisk support · read 2026-11-23 · GameDealWave diagram"
+    }
+  ]
+}
