@@ -65,7 +65,7 @@ Before ordering, look at which rear port is free and whether anything else alrea
 ## Who should choose a different storage option?
 Choose a different option if you want PS5 games to start from the storage itself. In that case, an internal M.2 drive that meets Sony's requirements is the path to compare, not a USB drive. Also look elsewhere if you need a drive that also serves a computer without being reformatted.
 
-Someone who mostly plays one or two large PS5 games may not need an archive drive at all. A USB drive helps when you rotate through many games and want to avoid downloading them again. That is a convenience point, not a speed or quality claim.
+Someone who mostly plays one or two large PS5 games may not need an archive drive at all. A USB drive helps when you rotate through many games and want to avoid downloading them again. If you mostly buy digital games, the [disc versus digital checklist](/guides/ps5-disc-vs-digital-checklist/) is a useful place to estimate how much storage you will need. That is a convenience point, not a speed or quality claim.
 
 ## What should you write down before ordering?
 Write down the exact product name, the model number, and the capacity. Add the rear USB port you will use, the number of PS4 games you want to keep, and whether you want to move PS5 games back and forth. Then check Sony's current extended-storage page for the console you own.
