@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T17:05:06+09:00",
+  "updated": "2026-11-24T10:05:24+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -65,11 +65,15 @@
       "image": "ops/queue/images/c50-1tb-xbox-expansion-vs-usb-play-check/cover.png",
       "imageRights": "own diagram",
       "factsObserved": "2026-11-23T10:25:29.380Z/2026-11-23T10:25:29.380Z",
-      "published": false,
+      "published": true,
       "creatorSessionId": "Zx2gArertWZu4WiO",
       "slot": "20261123-1920-shop",
       "dryRunPassedAt": "2026-11-23T10:41:00.246Z",
-      "dryRunReceipt": "/Users/kimchangheemac/Library/Aside/WindowsWorkspace/web-revenue/rebuild-202610/_ops/game-publisher/runs/2026-11-23T10-41-00-246Z-dryrun.json"
+      "dryRunReceipt": "/Users/kimchangheemac/Library/Aside/WindowsWorkspace/web-revenue/rebuild-202610/_ops/game-publisher/runs/2026-11-23T10-41-00-246Z-dryrun.json",
+      "publishedAt": "2026-11-24T10:05:24+09:00",
+      "liveUrl": "https://gamedealwave.online/picks/c50-1tb-xbox-expansion-vs-usb-play-check/",
+      "linkPending": false,
+      "programEnabled": true
     }
   ],
   "blocked": [
