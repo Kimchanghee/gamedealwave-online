@@ -1,0 +1,30 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / 8BITDO PRO 2",
+      "title": "Match the mode",
+      "columns": [
+        {
+          "title": "Check the system",
+          "accent": true,
+          "items": [
+            "Switch mode",
+            "X-input for Windows",
+            "Confirm firmware first"
+          ]
+        },
+        {
+          "title": "Know the limits",
+          "items": [
+            "No NFC scanning",
+            "No HD rumble",
+            "No wireless wake"
+          ]
+        }
+      ],
+      "foot": "8BitDo Pro 2 product + FAQ, read 2026-11-24 · GameDealWave diagram"
+    }
+  ]
+}

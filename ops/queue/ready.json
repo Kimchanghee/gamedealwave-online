@@ -74,6 +74,24 @@
       "liveUrl": "https://gamedealwave.online/picks/c50-1tb-xbox-expansion-vs-usb-play-check/",
       "linkPending": false,
       "programEnabled": true
+    },
+    {
+      "slug": "pro2-gray-switch-pc-mode-feature-check",
+      "program": "amazon",
+      "product": "8Bitdo Pro 2 Bluetooth Controller for Switch, Hall Effect Joystick Update, Wireless Gaming Controller for Switch, PC, Android, and Steam Deck & Apple (Gray Edition)",
+      "variant": "Gray Edition; Hall Effect Joystick; Pro 2 Bluetooth model",
+      "asin": "B0CSPH1JYV",
+      "source": "https://www.8bitdo.com/pro2",
+      "file": "ops/queue/pro2-gray-switch-pc-mode-feature-check.md",
+      "image": "ops/queue/images/pro2-gray-switch-pc-mode-feature-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-24T13:05:00+09:00/2026-11-24T13:12:00+09:00",
+      "published": false,
+      "creatorSessionId": "A5t5EnihL5nqYmXK",
+      "slot": "20261124-1300-shop",
+      "strategy": "amazon-deal-v1",
+      "dryRunPassedAt": "2026-11-24T04:30:08.437Z",
+      "dryRunReceipt": "/Users/kimchangheemac/Library/Aside/WindowsWorkspace/web-revenue/rebuild-202610/_ops/game-publisher/runs/2026-11-24T04-29-18-583Z-dryrun.json"
     }
   ],
   "blocked": [
