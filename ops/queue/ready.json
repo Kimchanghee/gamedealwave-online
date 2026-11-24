@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T10:05:24+09:00",
+  "updated": "2026-11-24T17:05:22+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -86,12 +86,16 @@
       "image": "ops/queue/images/pro2-gray-switch-pc-mode-feature-check/cover.png",
       "imageRights": "own diagram",
       "factsObserved": "2026-11-24T13:05:00+09:00/2026-11-24T13:12:00+09:00",
-      "published": false,
+      "published": true,
       "creatorSessionId": "A5t5EnihL5nqYmXK",
       "slot": "20261124-1300-shop",
       "strategy": "amazon-deal-v1",
       "dryRunPassedAt": "2026-11-24T04:30:08.437Z",
-      "dryRunReceipt": "/Users/kimchangheemac/Library/Aside/WindowsWorkspace/web-revenue/rebuild-202610/_ops/game-publisher/runs/2026-11-24T04-29-18-583Z-dryrun.json"
+      "dryRunReceipt": "/Users/kimchangheemac/Library/Aside/WindowsWorkspace/web-revenue/rebuild-202610/_ops/game-publisher/runs/2026-11-24T04-29-18-583Z-dryrun.json",
+      "publishedAt": "2026-11-24T17:05:22+09:00",
+      "liveUrl": "https://gamedealwave.online/picks/pro2-gray-switch-pc-mode-feature-check/",
+      "linkPending": false,
+      "programEnabled": true
     }
   ],
   "blocked": [
