@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T17:05:22+09:00",
+  "updated": "2026-11-24T19:36:01+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -96,6 +96,19 @@
       "liveUrl": "https://gamedealwave.online/picks/pro2-gray-switch-pc-mode-feature-check/",
       "linkPending": false,
       "programEnabled": true
+    },
+    {
+      "slug": "seagate-2tb-game-drive-ps5-archive-vs-play-check",
+      "program": "amazon",
+      "product": "Seagate 2TB Game Drive for PlayStation | USB 3.0 (STLV2000101)",
+      "variant": "2TB; USB 3.0; STLV2000101; officially licensed hard drive for PlayStation",
+      "asin": "B0CH87VY5B",
+      "source": "https://www.playstation.com/en-us/support/hardware/ps5-extended-storage/",
+      "file": "ops/queue/seagate-2tb-game-drive-ps5-archive-vs-play-check.md",
+      "image": "ops/queue/images/seagate-2tb-game-drive-ps5-archive-vs-play-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-24T19:31:01+09:00/2026-11-24T19:36:01+09:00",
+      "published": false
     }
   ],
   "blocked": [

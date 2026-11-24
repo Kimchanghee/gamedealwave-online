@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / PS5 USB STORAGE",
+      "title": "Archive or play?",
+      "columns": [
+        {
+          "title": "PS4 games",
+          "accent": true,
+          "items": [
+            "Install on the drive",
+            "Play directly from it"
+          ]
+        },
+        {
+          "title": "PS5 games",
+          "items": [
+            "Store on the drive",
+            "Copy back to play"
+          ]
+        }
+      ],
+      "foot": "PlayStation and Seagate support, read 2026-11-24 · GameDealWave diagram"
+    }
+  ]
+}
