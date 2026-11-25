@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / PS5 M.2 SSD",
+      "title": "Fit check",
+      "columns": [
+        {
+          "title": "Sony asks",
+          "accent": true,
+          "items": [
+            "Gen4 x4 NVMe, M.2",
+            "Cooling within 11.25 mm"
+          ]
+        },
+        {
+          "title": "Match listing",
+          "items": [
+            "MZ-V9P2T0CW, 2TB",
+            "Style: w/ Heatsink"
+          ]
+        }
+      ],
+      "foot": "Sony and Samsung pages, read 2026-11-25 · GameDealWave diagram"
+    }
+  ]
+}

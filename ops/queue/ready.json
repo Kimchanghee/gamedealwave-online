@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T10:05:24+09:00",
+  "updated": "2026-11-25T13:14:00+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -113,6 +113,19 @@
       "liveUrl": "https://gamedealwave.online/picks/seagate-2tb-game-drive-ps5-archive-vs-play-check/",
       "linkPending": false,
       "programEnabled": true
+    },
+    {
+      "slug": "samsung-990-pro-heatsink-2tb-ps5-fit-check",
+      "program": "amazon",
+      "product": "SAMSUNG 990 PRO w/ Heatsink SSD 2TB, PCIe Gen4 M.2 2280 (MZ-V9P2T0CW)",
+      "variant": "Style: 990 PRO w/ Heatsink; Capacity: 2TB; MZ-V9P2T0CW; M.2 2280",
+      "asin": "B0BHJDY57J",
+      "source": "https://www.playstation.com/en-us/support/hardware/ps5-install-m2-ssd/",
+      "file": "ops/queue/samsung-990-pro-heatsink-2tb-ps5-fit-check.md",
+      "image": "ops/queue/images/samsung-990-pro-heatsink-2tb-ps5-fit-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-25T13:07:30+09:00/2026-11-25T13:14:00+09:00",
+      "published": false
     }
   ],
   "blocked": [
