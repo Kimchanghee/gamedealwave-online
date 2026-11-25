@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T13:14:00+09:00",
+  "updated": "2026-11-25T17:05:02+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -125,7 +125,11 @@
       "image": "ops/queue/images/samsung-990-pro-heatsink-2tb-ps5-fit-check/cover.png",
       "imageRights": "own diagram",
       "factsObserved": "2026-11-25T13:07:30+09:00/2026-11-25T13:14:00+09:00",
-      "published": false
+      "published": true,
+      "publishedAt": "2026-11-25T17:05:02+09:00",
+      "liveUrl": "https://gamedealwave.online/picks/samsung-990-pro-heatsink-2tb-ps5-fit-check/",
+      "linkPending": false,
+      "programEnabled": true
     }
   ],
   "blocked": [
