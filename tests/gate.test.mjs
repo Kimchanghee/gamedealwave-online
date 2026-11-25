@@ -42,7 +42,7 @@ test('non-allowlisted host and non-product Amazon URLs fail', () => {
 });
 
 test('with the issued Associates tag, links carry ?tag= and the Amazon statement is shown', () => {
-  assert.equal(new URL(productHref('https://www.amazon.com/dp/B0EXAMPLE0')).searchParams.get('tag'), 'gamebeatonlin-20');
+  assert.equal(new URL(productHref('https://www.amazon.com/dp/B0EXAMPLE0')).searchParams.get('tag'), 'homecostgdw-20');
   assert.equal(disclosureFor('amazon'), AMAZON_STATEMENT);
   assert.notEqual(disclosureFor('amazon'), NO_TAG_STATEMENT);
 });

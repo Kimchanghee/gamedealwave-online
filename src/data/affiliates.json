@@ -38,14 +38,14 @@
     "amazon": {
       "name": "Amazon Associates (US)",
       "enabled": true,
-      "id": "gamebeatonlin-20",
+      "id": "homecostgdw-20",
       "hosts": [
         "www.amazon.com",
         "amazon.com",
         "amzn.to"
       ],
       "disclosure": "As an Amazon Associate I earn from qualifying purchases.",
-      "status": "active (Associates Central StoreID gamebeatonlin-20; gamedealwave.online registered) observed 2026-10-20",
+      "status": "active (store gamebeatonlin-20; site tracking ID homecostgdw-20 created in Associates Central 2026-11-25)",
       "linkFormat": {
         "type": "query",
         "param": "tag"

@@ -26,7 +26,7 @@ const post = (url, extra = '') => `---\ncategory: x\nproduct:\n  provider: ${fir
 
 test('shipped config: only Amazon is enabled, with the issued Associates tag; others off', () => {
   for (const [k, p] of Object.entries(shippedCfg.programs)) {
-    if (k === 'amazon') { assert.equal(p.enabled, true); assert.equal(p.id, 'gamebeatonlin-20'); }
+    if (k === 'amazon') { assert.equal(p.enabled, true); assert.equal(p.id, 'homecostgdw-20'); }
     else { assert.equal(p.enabled, false); assert.equal(p.id, ''); }
   }
   assert.deepEqual(checkAffiliates(fixture()), []);

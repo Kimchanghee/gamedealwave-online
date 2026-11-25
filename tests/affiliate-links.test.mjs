@@ -14,7 +14,7 @@ test('shipped config: Amazon active with tag, every other program inactive', () 
     const url = `https://${shipped[k].hosts[0]}/dp/B000000000?x=1`;
     if (k === 'amazon') {
       assert.equal(isActive(shipped, k), true);
-      assert.equal(new URL(hrefFor(shipped, url, k)).searchParams.get('tag'), 'gamebeatonlin-20');
+      assert.equal(new URL(hrefFor(shipped, url, k)).searchParams.get('tag'), 'homecostgdw-20');
       assert.equal(disclosureText(shipped, k, opts), AMAZON_STATEMENT);
       continue;
     }
