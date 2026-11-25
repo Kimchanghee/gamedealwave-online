@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / SWITCH 2 STORAGE",
+      "title": "Card check",
+      "columns": [
+        {
+          "title": "Nintendo says",
+          "accent": true,
+          "items": [
+            "microSD Express only",
+            "Update on first use"
+          ]
+        },
+        {
+          "title": "Match listing",
+          "items": [
+            "256 GB, Switch 2",
+            "Not an old Switch card"
+          ]
+        }
+      ],
+      "foot": "Nintendo and SanDisk pages, read 2026-11-25 · GameDealWave diagram"
+    }
+  ]
+}

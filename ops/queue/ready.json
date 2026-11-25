@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T17:05:02+09:00",
+  "updated": "2026-11-25T19:50:00+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -130,6 +130,32 @@
       "liveUrl": "https://gamedealwave.online/picks/samsung-990-pro-heatsink-2tb-ps5-fit-check/",
       "linkPending": false,
       "programEnabled": true
+    },
+    {
+      "slug": "switch2-sandisk-microsd-express-256gb-compat-check",
+      "program": "amazon",
+      "product": "Nintendo Switch 2 Micro SD Card, SanDisk (Nintendo SanDisk microSD Express Card for Nintendo Switch 2, 256 GB)",
+      "variant": "Edition: Standard Edition; 256 GB; model number 10016157; part BEE-A-SD01A",
+      "asin": "B0F3P3X5P2",
+      "source": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68425/~/microsd-card-and-microsd-express-card-compatibility-with-nintendo-switch%26nbsp%3B2",
+      "file": "ops/queue/switch2-sandisk-microsd-express-256gb-compat-check.md",
+      "image": "ops/queue/images/switch2-sandisk-microsd-express-256gb-compat-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-25T19:38:00+09:00/2026-11-25T19:50:00+09:00",
+      "published": false
+    },
+    {
+      "slug": "wd-black-sn850p-2tb-ps5-licensed-fit-check",
+      "program": "amazon",
+      "product": "WD_BLACK 2TB SN850P NVMe M.2 SSD Officially Licensed Storage Expansion for PS5 Consoles, with heatsink (WDBBYV0020BNC-WRSN)",
+      "variant": "Capacity: 2TB; WDBBYV0020BNC-WRSN; M.2 2280; with heatsink",
+      "asin": "B0C47ZX1WB",
+      "source": "https://www.playstation.com/en-us/support/hardware/ps5-install-m2-ssd/",
+      "file": "ops/queue/wd-black-sn850p-2tb-ps5-licensed-fit-check.md",
+      "image": "ops/queue/images/wd-black-sn850p-2tb-ps5-licensed-fit-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-25T19:40:00+09:00/2026-11-25T19:50:00+09:00",
+      "published": false
     }
   ],
   "blocked": [
