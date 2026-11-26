@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T19:50:00+09:00",
+  "updated": "2026-11-26T10:05:35+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -142,7 +142,11 @@
       "image": "ops/queue/images/switch2-sandisk-microsd-express-256gb-compat-check/cover.png",
       "imageRights": "own diagram",
       "factsObserved": "2026-11-25T19:38:00+09:00/2026-11-25T19:50:00+09:00",
-      "published": false
+      "published": true,
+      "publishedAt": "2026-11-26T10:05:35+09:00",
+      "liveUrl": "https://gamedealwave.online/picks/switch2-sandisk-microsd-express-256gb-compat-check/",
+      "linkPending": false,
+      "programEnabled": true
     },
     {
       "slug": "wd-black-sn850p-2tb-ps5-licensed-fit-check",
