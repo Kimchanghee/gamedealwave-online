@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / PS5 CONTROLLERS",
+      "title": "DualSense off console",
+      "columns": [
+        {
+          "title": "Sony lists",
+          "accent": true,
+          "items": [
+            "Haptics: USB on PC",
+            "Mic: Windows only"
+          ]
+        },
+        {
+          "title": "Check device",
+          "items": [
+            "Windows 10 or newer",
+            "Android: no triggers"
+          ]
+        }
+      ],
+      "foot": "PlayStation Support, read 2026-11-26 · GameDealWave diagram"
+    }
+  ]
+}

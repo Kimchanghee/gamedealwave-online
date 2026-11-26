@@ -190,6 +190,32 @@
       "imageRights": "own diagram",
       "factsObserved": "2026-11-26T13:08:00+09:00/2026-11-26T13:20:00+09:00",
       "published": false
+    },
+    {
+      "slug": "dualsense-white-pc-mac-phone-features-check",
+      "program": "amazon",
+      "product": "PlayStation DualSense Wireless Controller - White",
+      "variant": "Color: White; Platform: PlayStation 5",
+      "asin": "B0CQKLS4RP",
+      "source": "https://www.playstation.com/en-us/support/hardware/pair-dualsense-controller-bluetooth",
+      "file": "ops/queue/dualsense-white-pc-mac-phone-features-check.md",
+      "image": "ops/queue/images/dualsense-white-pc-mac-phone-features-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-26T19:33:00+09:00/2026-11-26T19:45:00+09:00",
+      "published": false
+    },
+    {
+      "slug": "seagate-1tb-xbox-card-series-x-s-only-check",
+      "program": "amazon",
+      "product": "Seagate Storage Expansion Card for Xbox Series X|S 1 TB",
+      "variant": "Memory Storage Capacity: 1 TB; Model STJR1000400",
+      "asin": "B08K3S6WJM",
+      "source": "https://support.xbox.com/en-US/help/hardware-network/storage/use-storage-expansion-card-xbox-series-x-s",
+      "file": "ops/queue/seagate-1tb-xbox-card-series-x-s-only-check.md",
+      "image": "ops/queue/images/seagate-1tb-xbox-card-series-x-s-only-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-26T19:34:00+09:00/2026-11-26T19:45:00+09:00",
+      "published": false
     }
   ],
   "blocked": [

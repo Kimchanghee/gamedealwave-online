@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / XBOX STORAGE",
+      "title": "Card fits Series X|S",
+      "columns": [
+        {
+          "title": "Xbox says",
+          "accent": true,
+          "items": [
+            "Series X|S only",
+            "Same speed as internal"
+          ]
+        },
+        {
+          "title": "Match listing",
+          "items": [
+            "1 TB, STJR1000400",
+            "Sign in to swap consoles"
+          ]
+        }
+      ],
+      "foot": "XBOX Support, read 2026-11-26 · GameDealWave diagram"
+    }
+  ]
+}
