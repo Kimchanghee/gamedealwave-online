@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / SWITCH 2 CONTROLLERS",
+      "title": "Switch 2 only",
+      "columns": [
+        {
+          "title": "Nintendo says",
+          "accent": true,
+          "items": [
+            "For Switch 2 only",
+            "Not for Nintendo Switch"
+          ]
+        },
+        {
+          "title": "Match listing",
+          "items": [
+            "Platform: Switch 2",
+            "GL/GR and audio jack"
+          ]
+        }
+      ],
+      "foot": "Nintendo pages, read 2026-11-26 · GameDealWave diagram"
+    }
+  ]
+}

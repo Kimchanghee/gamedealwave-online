@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / PS5 ACCESSORIES",
+      "title": "Portal needs more",
+      "columns": [
+        {
+          "title": "Sony asks",
+          "accent": true,
+          "items": [
+            "PS5 for Remote Play",
+            "5 Mbps Wi-Fi at least"
+          ]
+        },
+        {
+          "title": "Match listing",
+          "items": [
+            "Platform: PlayStation 5",
+            "Plus Premium to stream"
+          ]
+        }
+      ],
+      "foot": "PlayStation pages, read 2026-11-26 · GameDealWave diagram"
+    }
+  ]
+}

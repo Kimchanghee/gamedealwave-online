@@ -160,6 +160,32 @@
       "imageRights": "own diagram",
       "factsObserved": "2026-11-25T19:40:00+09:00/2026-11-25T19:50:00+09:00",
       "published": false
+    },
+    {
+      "slug": "switch2-pro-controller-switch1-compat-check",
+      "program": "amazon",
+      "product": "Nintendo Switch 2 Pro Controller",
+      "variant": "Style: Nintendo Switch 2 Pro Controller; Platform: Nintendo Switch 2",
+      "asin": "B0F3VTFD6J",
+      "source": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68224",
+      "file": "ops/queue/switch2-pro-controller-switch1-compat-check.md",
+      "image": "ops/queue/images/switch2-pro-controller-switch1-compat-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-26T13:07:00+09:00/2026-11-26T13:20:00+09:00",
+      "published": false
+    },
+    {
+      "slug": "ps-portal-remote-player-requirements-check",
+      "program": "amazon",
+      "product": "PlayStation 5 Portal Remote Player - Midnight Black",
+      "variant": "Color: Midnight Black; Platform: PlayStation 5",
+      "asin": "B0DSLTZ6M3",
+      "source": "https://www.playstation.com/en-us/accessories/playstation-portal-remote-player",
+      "file": "ops/queue/ps-portal-remote-player-requirements-check.md",
+      "image": "ops/queue/images/ps-portal-remote-player-requirements-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-26T13:08:00+09:00/2026-11-26T13:20:00+09:00",
+      "published": false
     }
   ],
   "blocked": [
