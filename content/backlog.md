@@ -47,3 +47,5 @@ Picks (hourly commerce posts) are written only from `ops/POSTING-RULES.md` and n
 | ultimate-2c-bluetooth-switch-variant-check | pick | Ultimate 2C Bluetooth Switch variant | queued | 2026-11-16 13:00 KST; full rehearsal passed, 27 pages / 3 posts |
 
 | ultimate2-wireless-purple-xbox-layout-platform-check | pick | queued | Does the Xbox-style button layout on the Purple 8BitDo Ultimate 2 Wireless mean it works on an Xbox console? | 2026-11-27 SHOP13:00, own diagram, not published |
+
+| ultimate2c-wireless-mint-windows-bluetooth-check | pick | queued | Ultimate 2C Wireless: Is Bluetooth the Windows Mode? | 2026-11-27 SHOP19:20; owned diagram; publication pending |

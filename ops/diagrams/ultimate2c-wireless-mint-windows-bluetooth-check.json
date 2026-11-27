@@ -1,0 +1,30 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / BUYING CHECK",
+      "title": "Wireless is not the model name Bluetooth",
+      "columns": [
+        {
+          "title": "This Wireless model",
+          "accent": true,
+          "items": [
+            "Windows: 2.4GHz or wired",
+            "Android: Bluetooth",
+            "Mint / Ultimate 2C"
+          ]
+        },
+        {
+          "title": "Check separately",
+          "items": [
+            "USB-A receiver space",
+            "L4 / R4 shoulder location",
+            "Switch Bluetooth model"
+          ]
+        }
+      ],
+      "foot": "Maker specifications, read 2026-11-27 · GameDealWave diagram"
+    }
+  ]
+}

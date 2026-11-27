@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T17:05:29+09:00",
+  "updated": "2026-11-27T10:49:07.850Z",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -241,6 +241,23 @@
       "slot": "20261127-1300-shop",
       "dryRunPassedAt": "2026-11-27T04:36:37.085Z",
       "dryRunReceipt": "rebuild-202610/_ops/game-publisher/runs/2026-11-27T04-36-37-085Z-dryrun.json"
+    },
+    {
+      "slug": "ultimate2c-wireless-mint-windows-bluetooth-check",
+      "program": "amazon",
+      "product": "8BitDo Ultimate 2C Wireless Controller",
+      "variant": "Mint / Ultimate 2C Wireless / Windows PC and Android; not Ultimate 2C Bluetooth for Switch",
+      "asin": "B0D736BCNM",
+      "source": "https://www.8bitdo.com/ultimate-2c-wireless-controller/",
+      "file": "ops/queue/ultimate2c-wireless-mint-windows-bluetooth-check.md",
+      "image": "ops/queue/images/ultimate2c-wireless-mint-windows-bluetooth-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-27T10:28:07.304Z/2026-11-27T10:28:07.304Z",
+      "published": false,
+      "creatorSessionId": "eKQADbA5pZWqaBGa",
+      "slot": "20261127-1920-shop",
+      "dryRunPassedAt": "2026-11-27T10:48:08.789Z",
+      "dryRunReceipt": "rebuild-202610/_ops/game-publisher/runs/2026-11-27T10-48-08-789Z-dryrun.json"
     }
   ],
   "blocked": [
