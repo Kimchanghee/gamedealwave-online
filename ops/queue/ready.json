@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T10:05:29+09:00",
+  "updated": "2026-11-27T04:37:03.728Z",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -220,6 +220,23 @@
       "imageRights": "own diagram",
       "factsObserved": "2026-11-26T19:34:00+09:00/2026-11-26T19:45:00+09:00",
       "published": false
+    },
+    {
+      "slug": "ultimate2-wireless-purple-xbox-layout-platform-check",
+      "program": "amazon",
+      "product": "8BitDo Ultimate 2 Wireless Controller",
+      "variant": "Color: Purple; Ultimate 2 Wireless; charging dock and 2.4G adapter; not Ultimate 2 Bluetooth",
+      "asin": "B0DR8Y5W6Z",
+      "source": "https://www.8bitdo.com/ultimate-2-wireless-controller",
+      "file": "ops/queue/ultimate2-wireless-purple-xbox-layout-platform-check.md",
+      "image": "ops/queue/images/ultimate2-wireless-purple-xbox-layout-platform-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-27T04:11:22.099Z/2026-11-27T04:16:59.844Z",
+      "published": false,
+      "creatorSessionId": "Aqecx68OX9WmMbNQ",
+      "slot": "20261127-1300-shop",
+      "dryRunPassedAt": "2026-11-27T04:36:37.085Z",
+      "dryRunReceipt": "rebuild-202610/_ops/game-publisher/runs/2026-11-27T04-36-37-085Z-dryrun.json"
     }
   ],
   "blocked": [

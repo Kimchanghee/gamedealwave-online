@@ -45,3 +45,5 @@ Picks (hourly commerce posts) are written only from `ops/POSTING-RULES.md` and n
 | dualsense-edge-buying-checklist | pick | queued | PlayStation DualSense Edge Wireless Controller; Amazon exact US variant verified 2026-11-15 |
 
 | ultimate-2c-bluetooth-switch-variant-check | pick | Ultimate 2C Bluetooth Switch variant | queued | 2026-11-16 13:00 KST; full rehearsal passed, 27 pages / 3 posts |
+
+| ultimate2-wireless-purple-xbox-layout-platform-check | pick | queued | Does the Xbox-style button layout on the Purple 8BitDo Ultimate 2 Wireless mean it works on an Xbox console? | 2026-11-27 SHOP13:00, own diagram, not published |

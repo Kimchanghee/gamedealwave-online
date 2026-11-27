@@ -1,0 +1,30 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / BUYING CHECK",
+      "title": "Layout is not console support",
+      "columns": [
+        {
+          "title": "Current maker list",
+          "accent": true,
+          "items": [
+            "Windows and Android",
+            "SteamOS and Apple",
+            "Check minimum OS"
+          ]
+        },
+        {
+          "title": "Do not assume",
+          "items": [
+            "Xbox console support",
+            "Switch model equivalence",
+            "Every mode on every OS"
+          ]
+        }
+      ],
+      "foot": "Official maker pages, read 2026-11-27 · GameDealWave diagram"
+    }
+  ]
+}
