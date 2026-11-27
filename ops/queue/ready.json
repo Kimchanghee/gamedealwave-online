@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T17:05:22+09:00",
+  "updated": "2026-11-27T10:05:29+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -176,7 +176,11 @@
       "image": "ops/queue/images/switch2-pro-controller-switch1-compat-check/cover.png",
       "imageRights": "own diagram",
       "factsObserved": "2026-11-26T13:07:00+09:00/2026-11-26T13:20:00+09:00",
-      "published": false
+      "published": true,
+      "publishedAt": "2026-11-27T10:05:29+09:00",
+      "liveUrl": "https://gamedealwave.online/picks/switch2-pro-controller-switch1-compat-check/",
+      "linkPending": false,
+      "programEnabled": true
     },
     {
       "slug": "ps-portal-remote-player-requirements-check",
