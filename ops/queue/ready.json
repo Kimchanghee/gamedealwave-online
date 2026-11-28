@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-28T10:05:24+09:00",
+  "updated": "2026-11-28T17:05:30+09:00",
   "note": "Prepared manuscripts only. Not published. Each needs: program enabled with real id in src/data/affiliates.json, exact-variant listing check, issued affiliate URL replacing AFFILIATE_URL_PENDING, link-check evidence file, publish time, image copied from ops/queue/images/<slug>/cover.png to public/images/picks/<slug>/cover.png, then the normal gate/publish path.",
   "items": [
     {
@@ -227,7 +227,11 @@
       "image": "ops/queue/images/seagate-1tb-xbox-card-series-x-s-only-check/cover.png",
       "imageRights": "own diagram",
       "factsObserved": "2026-11-26T19:34:00+09:00/2026-11-26T19:45:00+09:00",
-      "published": false
+      "published": true,
+      "publishedAt": "2026-11-28T17:05:30+09:00",
+      "liveUrl": "https://gamedealwave.online/picks/seagate-1tb-xbox-card-series-x-s-only-check/",
+      "linkPending": false,
+      "programEnabled": true
     },
     {
       "slug": "ultimate2-wireless-purple-xbox-layout-platform-check",
