@@ -1,0 +1,30 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / BUYING CHECK",
+      "title": "Cyclone 2 platform check",
+      "columns": [
+        {
+          "title": "GameSir lists",
+          "accent": true,
+          "items": [
+            "Switch, Android, iOS",
+            "PC and Steam",
+            "Bluetooth, wired, 2.4 GHz dongle"
+          ]
+        },
+        {
+          "title": "Confirm before buying",
+          "items": [
+            "No official Xbox or PlayStation",
+            "Switch 2 not in spec read",
+            "Dock: Black option selected"
+          ]
+        }
+      ],
+      "foot": "Maker specifications, read 2026-11-28 · GameDealWave diagram"
+    }
+  ]
+}

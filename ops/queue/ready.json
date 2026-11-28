@@ -283,6 +283,23 @@
       "slot": "20261128-1300-shop",
       "dryRunPassedAt": "2026-11-28T04:35:41.178Z",
       "dryRunReceipt": "rebuild-202610/_ops/game-publisher/runs/2026-11-28T04-35-41-178Z-dryrun.json"
+    },
+    {
+      "slug": "gamesir-cyclone-2-black-xbox-playstation-switch-2-support-check",
+      "program": "amazon",
+      "product": "GameSir Cyclone 2 Wireless PC Controller with Charging Dock",
+      "variant": "Black / TMR joysticks / Hall Effect and micro switch triggers / charging dock",
+      "asin": "B0DBLMZJRJ",
+      "source": "https://gamesir.com/products/gamesir-cyclone2/buy",
+      "file": "ops/queue/gamesir-cyclone-2-black-xbox-playstation-switch-2-support-check.md",
+      "image": "ops/queue/images/gamesir-cyclone-2-black-xbox-playstation-switch-2-support-check/cover.png",
+      "imageRights": "own diagram",
+      "factsObserved": "2026-11-28T10:26:52.131Z/2026-11-28T10:26:52.131Z",
+      "published": false,
+      "creatorSessionId": "ClaudeTakeover1920S",
+      "slot": "20261128-1920-shop",
+      "dryRunPassedAt": "2026-11-28T10:38:55.276Z",
+      "dryRunReceipt": "rebuild-202610/_ops/game-publisher/runs/2026-11-28T10-38-55-276Z-dryrun.json"
     }
   ],
   "blocked": [

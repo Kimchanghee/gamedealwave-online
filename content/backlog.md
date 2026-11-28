@@ -51,3 +51,5 @@ Picks (hourly commerce posts) are written only from `ops/POSTING-RULES.md` and n
 | ultimate2c-wireless-mint-windows-bluetooth-check | pick | queued | Ultimate 2C Wireless: Is Bluetooth the Windows Mode? | 2026-11-27 SHOP19:20; owned diagram; publication pending |
 
 | gamesir-g7se-white-wired-back-button-lock-check | pick | queued | GameSir G7 SE: Does a Detachable Cable Mean Wireless? | SHOP 2026-11-28 13:00; inspected own diagram; exact native ASIN; not published |
+
+| gamesir-cyclone-2-black-xbox-playstation-switch-2-support-check | pick | queued | GameSir Cyclone 2: Which Consoles Does It Work With? | SHOP 2026-11-28 19:20; inspected own diagram; exact native ASIN; not published |
