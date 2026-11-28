@@ -1,0 +1,30 @@
+{
+  "images": [
+    {
+      "file": "cover.png",
+      "kind": "columns",
+      "kicker": "GAMEDEALWAVE / BUYING CHECK",
+      "title": "Detachable does not mean wireless",
+      "columns": [
+        {
+          "title": "G7 SE connection",
+          "accent": true,
+          "items": [
+            "USB wired connection",
+            "Detachable 3m USB-C lead",
+            "No wireless claim"
+          ]
+        },
+        {
+          "title": "Back control choice",
+          "items": [
+            "Two mappable back buttons",
+            "Quick latches enable / disable",
+            "Not trigger travel stops"
+          ]
+        }
+      ],
+      "foot": "Maker specifications, read 2026-11-28 · GameDealWave diagram"
+    }
+  ]
+}
